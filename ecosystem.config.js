@@ -3,6 +3,7 @@ module.exports = {
     {
       name          : 'personal-site',
       script        : 'npx',
+      watch         : true,
       interpreter   : 'none',
       args          : 'serve -p 3000 build',
       env_production : {
