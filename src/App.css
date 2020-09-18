@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #282c34;
 }
 
 .App-header {
@@ -20,4 +21,16 @@
 
 body {
   padding-top: 50px;
+}
+
+.title {
+  color: darkgrey;
+}
+
+html {
+  background-color: #282c34;
+}
+
+.body-text {
+  color: darkgrey;
 }
