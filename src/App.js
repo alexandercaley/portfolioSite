@@ -10,12 +10,16 @@ import { LinkContainer } from "react-router-bootstrap";
 import { Navbar, Nav } from "react-bootstrap";
 import "./App.css";
 
+import logo from "./assets/logo.png";
+
 function App() {
   return (
     <div className="App">
       <Router>
         <Navbar fixed="top" bg="dark" variant="dark">
-          <Navbar.Brand href="/home">Brand</Navbar.Brand>
+          <Navbar.Brand>
+            <img src={logo} width="25" height="25" alt="" />
+          </Navbar.Brand>
           <Nav className="mr-auto">
             <LinkContainer to="/home">
               <Nav.Link>Home</Nav.Link>

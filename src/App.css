@@ -1,10 +1,19 @@
-.App {
-  text-align: center;
+.App,
+.App-header,
+html {
   background-color: #282c34;
 }
 
+.title,
+.body-text {
+  color: darkgrey;
+}
+
+.App {
+  text-align: center;
+}
+
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -14,23 +23,66 @@
   color: white;
 }
 
-.center-navbar {
-  width: 30%;
-  text-align: center;
+html {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 body {
   padding-top: 50px;
 }
 
-.title {
-  color: darkgrey;
+.project-thumbnail {
+  position: relative;
+  height: auto;
+  width: 400px;
+  padding-bottom: 0px;
+}
+.project-padding {
+  padding-bottom: 25px;
+  padding-left: 20px;
 }
 
-html {
-  background-color: #282c34;
+.project-thumbnail:hover .overlay {
+  opacity: 0.45;
 }
 
-.body-text {
-  color: darkgrey;
+.projectImage {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+  width: auto;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.text {
+  color: black;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#project-title {
+  padding-bottom: 20px;
+}
+
+#project-category {
+  padding-top: 20px;
 }

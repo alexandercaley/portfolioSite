@@ -8,7 +8,6 @@ function Projects(props) {
   return (
     <div>
       <h1 className="title">Projects</h1>
-
       <Row>
         <Col>
           <Thumbnail
