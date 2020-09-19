@@ -49,8 +49,6 @@ function Thumbnail(props) {
             <div className="project-thumbnail">
               <Image
                 src={props.image}
-                width="400"
-                height="250"
                 rounded="true"
                 alt="Project Image"
                 className="projectImage"
