@@ -86,3 +86,9 @@ body {
 #project-category {
   padding-top: 20px;
 }
+
+.PageNotFound {
+  color: darkgrey;
+  padding-top: 150px;
+  font-size: 50pt;
+}
