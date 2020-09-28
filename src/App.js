@@ -10,6 +10,7 @@ import {
 import Home from "./Home";
 import Projects from "./Projects";
 import Contact from "./Contact";
+import ProjectPage from "./ProjectPage";
 import PageNotFound from "./PageNotFound";
 
 import { LinkContainer } from "react-router-bootstrap";
@@ -46,6 +47,7 @@ function App() {
           <Route exact path="/home" component={Home} />
           <Route exact path="/projects" component={Projects} />
           <Route exact path="/contact" component={Contact} />
+          <Route path="/project/:id" component={ProjectPage} />
           <Route path="*" component={PageNotFound} />
         </Switch>
       </Router>

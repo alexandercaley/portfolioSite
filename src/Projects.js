@@ -13,7 +13,7 @@ function Projects() {
         <Row>
           <Col>
             <Thumbnail
-              link="/test"
+              link="/project/hello"
               image={amsterdam}
               title="TEST"
               category="Test App"
@@ -21,7 +21,7 @@ function Projects() {
           </Col>
           <Col>
             <Thumbnail
-              link="/test"
+              link="/project/bye"
               image={phone}
               title="TEST"
               category="Test App"
