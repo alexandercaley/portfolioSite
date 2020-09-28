@@ -1,63 +1,66 @@
 import React from "react";
 import Thumbnail from "./Thumbnail";
 
-import logo from "./assets/7644.jpg";
-import { Row, Col } from "reactstrap";
+import phone from "./assets/7644.png";
+import amsterdam from "./assets/amsterdam.jpg";
+import { Container, Row, Col } from "reactstrap";
 
-function Projects(props) {
+function Projects() {
   return (
     <div>
       <h1 className="title">Projects</h1>
-      <Row>
-        <Col>
-          <Thumbnail
-            link="/test"
-            image={logo}
-            title="TEST"
-            category="Test App"
-          />
-        </Col>
-        <Col>
-          <Thumbnail
-            link="/test"
-            image={logo}
-            title="TEST"
-            category="Test App"
-          />
-        </Col>
-        <Col>
-          <Thumbnail
-            link="/test"
-            image={logo}
-            title="TEST"
-            category="Test App"
-          />
-        </Col>
-        <Col>
-          <Thumbnail
-            link="/test"
-            image={logo}
-            title="TEST"
-            category="Test App"
-          />
-        </Col>
-        <Col>
-          <Thumbnail
-            link="/test"
-            image={logo}
-            title="TEST"
-            category="Test App"
-          />
-        </Col>
-        <Col>
-          <Thumbnail
-            link="/test"
-            image={logo}
-            title="TEST"
-            category="Test App"
-          />
-        </Col>
-      </Row>
+      <Container fluid="md">
+        <Row>
+          <Col>
+            <Thumbnail
+              link="/test"
+              image={amsterdam}
+              title="TEST"
+              category="Test App"
+            />
+          </Col>
+          <Col>
+            <Thumbnail
+              link="/test"
+              image={phone}
+              title="TEST"
+              category="Test App"
+            />
+          </Col>
+          <Col>
+            <Thumbnail
+              link="/test"
+              image={phone}
+              title="TEST"
+              category="Test App"
+            />
+          </Col>
+          <Col>
+            <Thumbnail
+              link="/test"
+              image={phone}
+              title="TEST"
+              category="Test App"
+            />
+          </Col>
+          <Col>
+            <Thumbnail
+              link="/test"
+              image={phone}
+              title="TEST"
+              category="Test App"
+            />
+          </Col>
+          <Col>
+            <Thumbnail
+              link="/test"
+              image={phone}
+              title="TEST"
+              category="Test App"
+            />
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 }

@@ -4,8 +4,14 @@ html {
   background-color: #282c34;
 }
 
+.logo {
+  width: auto;
+  height: 20px;
+}
+
 .title,
 .body-text {
+  padding-top: 10px;
   color: darkgrey;
 }
 
@@ -26,31 +32,32 @@ html {
 html {
   padding-left: 15px;
   padding-right: 15px;
+  background-color: #282c34;
+  color: #282c34;
 }
 
 body {
   padding-top: 50px;
+  background-color: #282c34;
 }
 
 .project-thumbnail {
   position: relative;
   height: auto;
-  width: 400px;
-  padding-bottom: 0px;
-}
-.project-padding {
-  padding-bottom: 25px;
-  padding-left: 20px;
+  min-width: 275px;
+  max-width: 350px;
+  padding-bottom: 10px;
 }
 
 .project-thumbnail:hover .overlay {
-  opacity: 0.45;
+  opacity: 0.75;
 }
 
 .projectImage {
   display: block;
   width: 100%;
   height: auto;
+  border-radius: 20px;
 }
 
 .overlay {
@@ -64,10 +71,10 @@ body {
   opacity: 0;
   transition: 0.5s ease;
   background-color: white;
-  border-radius: 5px;
+  border-radius: 20px;
 }
 
-.text {
+.itemText {
   color: black;
   font-size: 20px;
   position: absolute;

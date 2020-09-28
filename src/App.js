@@ -7,24 +7,24 @@ import {
   Switch,
 } from "react-router-dom";
 
-import Home from "./Home.js";
-import Projects from "./Projects.js";
-import Contact from "./Contact.js";
-import PageNotFound from "./PageNotFound.js";
+import Home from "./Home";
+import Projects from "./Projects";
+import Contact from "./Contact";
+import PageNotFound from "./PageNotFound";
 
 import { LinkContainer } from "react-router-bootstrap";
 import { Navbar, Nav } from "react-bootstrap";
 import "./App.css";
 
-import logo from "./assets/logo.png";
+import logo from "./assets/logo/logo_trans.png";
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Navbar fixed="top" bg="dark" variant="dark">
-          <Navbar.Brand>
-            <img src={logo} width="25" height="25" alt="" />
+          <Navbar.Brand style={{ alignContent: "center" }}>
+            <img src={logo} className="logo" alt="" />
           </Navbar.Brand>
           <Nav className="mr-auto">
             <LinkContainer to="/home">
