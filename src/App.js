@@ -7,11 +7,11 @@ import {
   Switch,
 } from "react-router-dom";
 
-import Home from "./Home";
-import Projects from "./Projects";
-import Contact from "./Contact";
-import ProjectPage from "./ProjectPage";
-import PageNotFound from "./PageNotFound";
+import Home from "./Pages/Home";
+import Projects from "./Pages/Projects";
+import Contact from "./Pages/Contact";
+import ProjectPage from "./Pages/ProjectPage";
+import PageNotFound from "./Pages/PageNotFound";
 
 import { LinkContainer } from "react-router-bootstrap";
 import { Navbar, Nav } from "react-bootstrap";

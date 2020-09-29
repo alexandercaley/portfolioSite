@@ -1,9 +1,9 @@
 import React from "react";
-import Thumbnail from "./Components/Thumbnail";
+import Thumbnail from "../Components/Thumbnail";
 import { motion } from "framer-motion";
 
-import phone from "./assets/7644.png";
-import amsterdam from "./assets/amsterdam.jpg";
+import phone from "../assets/7644.png";
+import amsterdam from "../assets/amsterdam.jpg";
 import { Container, Row, Col } from "reactstrap";
 
 function Projects() {
