@@ -1,5 +1,5 @@
 import React from "react";
-import Thumbnail from "./Thumbnail";
+import Thumbnail from "./Components/Thumbnail";
 import { motion } from "framer-motion";
 
 import phone from "./assets/7644.png";
