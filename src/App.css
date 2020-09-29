@@ -4,17 +4,6 @@ html {
   background-color: #282c34;
 }
 
-.logo {
-  width: auto;
-  height: 20px;
-}
-
-.title,
-.body-text {
-  padding-top: 10px;
-  color: darkgrey;
-}
-
 .App {
   text-align: center;
 }
@@ -29,6 +18,17 @@ html {
   color: white;
 }
 
+.logo {
+  width: auto;
+  height: 20px;
+}
+
+.title,
+.body-text {
+  padding-top: 10px;
+  color: darkgrey;
+}
+
 html {
   padding-left: 15px;
   padding-right: 15px;
@@ -41,6 +41,13 @@ body {
   background-color: #282c34;
 }
 
+.projectImage {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
 .project-thumbnail {
   position: relative;
   height: auto;
@@ -50,13 +57,6 @@ body {
 
 .project-thumbnail:hover .overlay {
   opacity: 0.8;
-}
-
-.projectImage {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 20px;
 }
 
 .overlay {
@@ -86,11 +86,12 @@ body {
 }
 
 #project-title {
-  padding-bottom: 20px;
+  padding-bottom: 25px;
+  font-weight: bold;
 }
 
 #project-category {
-  padding-top: 20px;
+  padding-top: 25px;
 }
 
 .PageNotFound {
