@@ -22,7 +22,7 @@ function Projects() {
             scale: 1,
             opacity: 1,
             transition: {
-              delay: 0.4,
+              delay: 0.2,
             },
           },
         }}

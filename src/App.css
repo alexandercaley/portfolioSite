@@ -46,7 +46,6 @@ body {
   height: auto;
   min-width: 275px;
   max-width: 350px;
-  padding-bottom: 10px;
 }
 
 .project-thumbnail:hover .overlay {
