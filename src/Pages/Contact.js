@@ -29,6 +29,12 @@ class Contact extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
+    if (!this.state.name || !this.state.email || !this.state.message) {
+      this.setState({
+        emailSent: false,
+      });
+      return;
+    }
     this.setState({
       disabled: true,
     });
@@ -123,25 +129,23 @@ class Contact extends React.Component {
                     />
                   </Form.Group>
 
-                  <Button
-                    className="d-inline-block"
-                    variant="primary"
-                    type="submit"
-                    disabled={this.state.disabled}
-                  >
-                    Send
-                  </Button>
-
-                  {this.state.emailSent === true && (
-                    <p
-                      className="d-inline success-msg"
-                      style={{ color: "green" }}
+                  <div>
+                    <Button
+                      className="d-inline-block"
+                      variant="primary"
+                      type="submit"
+                      disabled={this.state.disabled}
                     >
+                      Send
+                    </Button>
+                  </div>
+                  {this.state.emailSent === true && (
+                    <p className="d-inline msg" id="inlineMessageSuccess">
                       Email Sent
                     </p>
                   )}
                   {this.state.emailSent === false && (
-                    <p className="d-inline err-msg" style={{ color: "red" }}>
+                    <p className="d-inline msg" id="inlineMessageFail">
                       Email Not Sent
                     </p>
                   )}

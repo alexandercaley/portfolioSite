@@ -26,7 +26,7 @@ app.get("/api", (_, res) => {
   res.send("API STATUS: Running!");
 });
 
-app.post("/api/email", (req, res, _) => {
+app.post("/api/email", (req, res) => {
   console.log(req.body);
 
   sendGrid.setApiKey(
