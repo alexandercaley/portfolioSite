@@ -38,9 +38,14 @@ class Contact extends React.Component {
     this.setState({
       disabled: true,
     });
+    let payload = {
+      name: this.state.name,
+      email: this.state.email,
+      message: this.state.message,
+    };
 
     axios
-      .post("http://localhost:4000/api/email", this.state)
+      .post("http://localhost:4000/api/email", payload)
       .then((res) => {
         if (res.data.success) {
           this.setState({
