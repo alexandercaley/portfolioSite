@@ -1,15 +1,21 @@
 module.exports = {
-  apps : [
+  apps: [
     {
-      name          : 'personal-site',
-      script        : 'npx',
-      watch         : true,
-      interpreter   : 'none',
-      args          : 'serve -p 3000 build',
-      env_production : {
-        NODE_ENV: 'production'
-      }
-    }
+      name: "react-app",
+      script: "npx",
+      args: "serve -p 3000 build",
+      watch: true,
+
+      env_production: {
+        NODE_ENV: "production",
+      },
+    },
+    {
+      name: "contactServer",
+      script: "./api/contact.js",
+      watch: true,
+      ignore_watch: ["node_modules"],
+    },
   ],
 
   // deploy : {

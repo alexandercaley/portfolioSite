@@ -94,6 +94,10 @@ body {
   padding-top: 25px;
 }
 
+.formLabel {
+  color: whitesmoke;
+}
+
 .PageNotFound {
   color: darkgrey;
   padding-top: 150px;

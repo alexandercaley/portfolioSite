@@ -2,8 +2,8 @@ import React from "react";
 import Thumbnail from "../Components/Thumbnail";
 import { motion } from "framer-motion";
 
-import phone from "../assets/7644.png";
-import amsterdam from "../assets/amsterdam.jpg";
+import phone from "../assets/projectImages/7644.png";
+import amsterdam from "../assets/projectImages/amsterdam.jpg";
 import { Container, Row, Col } from "reactstrap";
 
 function Projects() {
@@ -27,7 +27,7 @@ function Projects() {
           },
         }}
       >
-        <Container fluid="md">
+        <Container fluid="xl">
           <Row>
             <Col>
               <Thumbnail
