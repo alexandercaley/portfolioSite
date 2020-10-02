@@ -9,6 +9,12 @@ import shellImage from "../assets/projectImages/shellImage.png";
 import clippersImage from "../assets/projectImages/clippersImage.png";
 
 function Projects() {
+  //Set size for mobile
+  let thumbnailStyle = "project-thumbnail-reg";
+  if (window.innerWidth <= 400) {
+    thumbnailStyle = "project-thumbnail-sm";
+  }
+
   return (
     <div>
       <h1 className="title">Projects</h1>
@@ -37,6 +43,7 @@ function Projects() {
                 image={tankImage}
                 title="Tank Game"
                 category="Java Application"
+                thumbnailStyle={thumbnailStyle}
               />
             </Col>
             <Col>
@@ -45,6 +52,7 @@ function Projects() {
                 image={shellImage}
                 title="Linux Shell"
                 category="C Program"
+                thumbnailStyle={thumbnailStyle}
               />
             </Col>
             <Col>
@@ -53,6 +61,7 @@ function Projects() {
                 image={clippersImage}
                 title="Clippers"
                 category="iOS Swift App"
+                thumbnailStyle={thumbnailStyle}
               />
             </Col>
             <Col>
@@ -61,6 +70,7 @@ function Projects() {
                 image={redditImage}
                 title="Reddit Lite"
                 category="Full Stack Web App"
+                thumbnailStyle={thumbnailStyle}
               />
             </Col>
           </Row>

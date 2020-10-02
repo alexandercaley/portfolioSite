@@ -7,10 +7,10 @@ class Thumbnail extends React.Component {
   render() {
     return (
       <div style={{ paddingBottom: 15 }}>
-        <div className="project-thumbnail">
+        <div className={this.props.thumbnailStyle}>
           <Link to={this.props.link}>
             <motion.div whileHover={{ scale: 1.03 }}>
-              <div className="project-thumbnail">
+              <div className={this.props.thumbnailStyle}>
                 <Image
                   src={this.props.image}
                   alt="Project Image"
