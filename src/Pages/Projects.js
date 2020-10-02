@@ -33,18 +33,10 @@ function Projects() {
           <Row>
             <Col>
               <Thumbnail
-                link="/project/tankGame"
-                image={tankImage}
-                title="Tank Game"
-                category="Java Application"
-              />
-            </Col>
-            <Col>
-              <Thumbnail
-                link="/project/linuxShell"
-                image={shellImage}
-                title="Linux Shell"
-                category="C Program"
+                link="/project/redditLite"
+                image={redditImage}
+                title="Reddit Lite"
+                category="Full Stack Web App"
               />
             </Col>
             <Col>
@@ -57,10 +49,18 @@ function Projects() {
             </Col>
             <Col>
               <Thumbnail
-                link="/project/redditLite"
-                image={redditImage}
-                title="Reddit Lite"
-                category="Full Stack Web App"
+                link="/project/linuxShell"
+                image={shellImage}
+                title="Linux Shell"
+                category="C Program"
+              />
+            </Col>
+            <Col>
+              <Thumbnail
+                link="/project/tankGame"
+                image={tankImage}
+                title="Tank Game"
+                category="Java Application"
               />
             </Col>
           </Row>
