@@ -6,7 +6,7 @@ import { Image } from "react-bootstrap";
 class Thumbnail extends React.Component {
   render() {
     let thumbnailStyle = "project-thumbnail-reg";
-    if (window.innerWidth <= 400) {
+    if (window.innerWidth <= 400 || window.innerHeight <= 400) {
       thumbnailStyle = "project-thumbnail-sm";
     }
     return (
