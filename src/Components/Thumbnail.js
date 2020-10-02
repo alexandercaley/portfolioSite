@@ -5,12 +5,16 @@ import { Image } from "react-bootstrap";
 
 class Thumbnail extends React.Component {
   render() {
+    let thumbnailStyle = "project-thumbnail-reg";
+    if (window.innerWidth <= 400) {
+      thumbnailStyle = "project-thumbnail-sm";
+    }
     return (
       <div style={{ paddingBottom: 15 }}>
-        <div className={this.props.thumbnailStyle}>
+        <div className={thumbnailStyle}>
           <Link to={this.props.link}>
             <motion.div whileHover={{ scale: 1.03 }}>
-              <div className={this.props.thumbnailStyle}>
+              <div className={thumbnailStyle}>
                 <Image
                   src={this.props.image}
                   alt="Project Image"
