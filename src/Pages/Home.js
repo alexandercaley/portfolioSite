@@ -118,6 +118,7 @@ function Home(props) {
               <div style={{ paddingBottom: "1rem" }}>
                 <Card
                   className="contextCard"
+                  id="infoCard"
                   bg="dark"
                   text="white"
                   style={{ borderRadius: "20px" }}
@@ -146,6 +147,7 @@ function Home(props) {
               <div style={{ paddingBottom: "1rem" }}>
                 <Card
                   className="contextCard"
+                  id="infoCard"
                   bg="dark"
                   text="white"
                   style={{ borderRadius: "20px" }}
