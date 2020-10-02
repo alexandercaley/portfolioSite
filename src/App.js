@@ -9,7 +9,7 @@ import {
 
 import Home from "./Pages/Home";
 import Projects from "./Pages/Projects";
-import Contact from "./Pages/Contact";
+import ContactPage from "./Pages/ContactPage";
 import ProjectPage from "./Pages/ProjectPage";
 import PageNotFound from "./Pages/PageNotFound";
 
@@ -46,7 +46,7 @@ function App() {
           </Route>
           <Route exact path="/home" component={Home} />
           <Route exact path="/projects" component={Projects} />
-          <Route exact path="/contact" component={Contact} />
+          <Route exact path="/contact" component={ContactPage} />
           <Route path="/project/:id" component={ProjectPage} />
           <Route path="*" component={PageNotFound} />
         </Switch>

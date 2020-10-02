@@ -71,11 +71,10 @@ class Contact extends React.Component {
 
   render() {
     return (
-      <Container fluid={true}>
-        <Row className="justify-content-center">
-          <Col md={8}>
-            <div>
-              <h1 className="title">Contact</h1>
+      <div>
+        <Container fluid={true}>
+          <Row className="justify-content-center">
+            <Col md={8}>
               <motion.div
                 initial="hidden"
                 animate="visible"
@@ -159,10 +158,10 @@ class Contact extends React.Component {
                   )}
                 </Form>
               </motion.div>
-            </div>
-          </Col>
-        </Row>
-      </Container>
+            </Col>
+          </Row>
+        </Container>
+      </div>
     );
   }
 }
