@@ -1,10 +1,12 @@
 import React from "react";
 import Thumbnail from "../Components/Thumbnail";
 import { motion } from "framer-motion";
-
-import phone from "../assets/projectImages/7644.png";
-import amsterdam from "../assets/projectImages/amsterdam.jpg";
 import { Container, Row, Col } from "reactstrap";
+
+import tankImage from "../assets/projectImages/tankImage.png";
+import redditImage from "../assets/projectImages/redditImage.png";
+import shellImage from "../assets/projectImages/shellImage.png";
+import clippersImage from "../assets/projectImages/clippersImage.png";
 
 function Projects() {
   return (
@@ -31,50 +33,34 @@ function Projects() {
           <Row>
             <Col>
               <Thumbnail
-                link="/project/hello"
-                image={amsterdam}
-                title="TEST"
-                category="Test App"
+                link="/project/tankGame"
+                image={tankImage}
+                title="Tank Game"
+                category="Java Application"
               />
             </Col>
             <Col>
               <Thumbnail
-                link="/project/bye"
-                image={phone}
-                title="TEST"
-                category="Test App"
+                link="/project/linuxShell"
+                image={shellImage}
+                title="Linux Shell"
+                category="C Program"
               />
             </Col>
             <Col>
               <Thumbnail
-                link="/test"
-                image={phone}
-                title="TEST"
-                category="Test App"
+                link="/project/clippersApp"
+                image={clippersImage}
+                title="Clippers"
+                category="iOS Swift App"
               />
             </Col>
             <Col>
               <Thumbnail
-                link="/test"
-                image={phone}
-                title="TEST"
-                category="Test App"
-              />
-            </Col>
-            <Col>
-              <Thumbnail
-                link="/test"
-                image={phone}
-                title="TEST"
-                category="Test App"
-              />
-            </Col>
-            <Col>
-              <Thumbnail
-                link="/test"
-                image={phone}
-                title="TEST"
-                category="Test App"
+                link="/project/redditLite"
+                image={redditImage}
+                title="Reddit Lite"
+                category="Full Stack Web App"
               />
             </Col>
           </Row>

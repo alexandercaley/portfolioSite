@@ -95,38 +95,41 @@ class Contact extends React.Component {
               >
                 <Form onSubmit={this.handleSubmit}>
                   <Form.Group>
-                    <Form.Label htmlFor="full-name" className="formLabel">
+                    {/* <Form.Label htmlFor="full-name" className="formLabel">
                       Full Name
-                    </Form.Label>
+                    </Form.Label> */}
                     <Form.Control
                       id="full-name"
                       name="name"
                       type="text"
+                      placeholder="Full Name"
                       value={this.state.name}
                       onChange={this.handleChange}
                     />
                   </Form.Group>
 
                   <Form.Group>
-                    <Form.Label htmlFor="email" className="formLabel">
+                    {/* <Form.Label htmlFor="email" className="formLabel">
                       Email
-                    </Form.Label>
+                    </Form.Label> */}
                     <Form.Control
                       id="email"
                       name="email"
                       type="email"
+                      placeholder="Email Address"
                       value={this.state.email}
                       onChange={this.handleChange}
                     />
                   </Form.Group>
 
                   <Form.Group>
-                    <Form.Label htmlFor="message" className="formLabel">
+                    {/* <Form.Label htmlFor="message" className="formLabel">
                       Message
-                    </Form.Label>
+                    </Form.Label> */}
                     <Form.Control
                       id="message"
                       name="message"
+                      placeholder="Message"
                       as="textarea"
                       rows="3"
                       value={this.state.message}

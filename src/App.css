@@ -1,11 +1,12 @@
-.App,
+/* .App,
 .App-header,
 html {
   background-color: #282c34;
-}
+} */
 
 .App {
   text-align: center;
+  background-color: #282c34;
 }
 
 .App-header {
@@ -33,12 +34,10 @@ html {
   padding-left: 15px;
   padding-right: 15px;
   background-color: #282c34;
-  color: #282c34;
 }
 
 body {
   padding-top: 50px;
-  background-color: #282c34;
 }
 
 .projectImage {
@@ -51,8 +50,8 @@ body {
 .project-thumbnail {
   position: relative;
   height: auto;
-  min-width: 275px;
-  max-width: 350px;
+  min-width: 400px;
+  max-width: 800px;
 }
 
 .project-thumbnail:hover .overlay {
