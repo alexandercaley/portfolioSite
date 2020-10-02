@@ -7,6 +7,8 @@ import tankImage from "../assets/projectImages/tankImage.png";
 import redditImage from "../assets/projectImages/redditImage.png";
 import shellImage from "../assets/projectImages/shellImage.png";
 import clippersImage from "../assets/projectImages/clippersImage.png";
+import greenworldImage from "../assets/projectImages/greenworldImage.png";
+import surgedateImage from "../assets/projectImages/surgedateImage.png";
 
 function Projects() {
   return (
@@ -33,6 +35,14 @@ function Projects() {
           <Row>
             <Col>
               <Thumbnail
+                link="/project/surgeDate"
+                image={surgedateImage}
+                title="SurgeDate Server"
+                category="Backend Server"
+              />
+            </Col>
+            <Col>
+              <Thumbnail
                 link="/project/redditLite"
                 image={redditImage}
                 title="Reddit Lite"
@@ -41,10 +51,10 @@ function Projects() {
             </Col>
             <Col>
               <Thumbnail
-                link="/project/clippersApp"
-                image={clippersImage}
-                title="Clippers"
-                category="iOS Swift App"
+                link="/project/greenWorld"
+                image={greenworldImage}
+                title="GreenWorld"
+                category="Full Stack Web App"
               />
             </Col>
             <Col>
@@ -53,6 +63,14 @@ function Projects() {
                 image={shellImage}
                 title="Linux Shell"
                 category="C Program"
+              />
+            </Col>
+            <Col>
+              <Thumbnail
+                link="/project/clippersApp"
+                image={clippersImage}
+                title="Clippers"
+                category="iOS Swift App"
               />
             </Col>
             <Col>

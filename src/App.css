@@ -20,6 +20,11 @@ html {
   color: darkgrey;
 }
 
+.contextCard {
+  max-width: 50rem;
+  height: auto;
+}
+
 html {
   /* padding-left: 15px;
   padding-right: 15px; */

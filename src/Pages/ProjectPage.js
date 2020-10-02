@@ -4,8 +4,8 @@ import { useParams } from "react-router";
 import HashMap from "hashmap";
 
 function ProjectPage(props) {
-  let project = new HashMap();
-  project.multi(
+  let projectData = new HashMap();
+  projectData.multi(
     "hello",
     {
       name: "Hi There",
@@ -16,12 +16,12 @@ function ProjectPage(props) {
     }
   );
   let { id } = useParams();
-  if (!project.has(id)) {
+  if (!projectData.has(id)) {
     return <PageNotFound />;
   }
   return (
     <div>
-      <h1 className="title">{project.get(id).name}</h1>
+      <h1 className="title">{projectData.get(id).name}</h1>
     </div>
   );
 }
