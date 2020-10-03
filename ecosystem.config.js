@@ -10,12 +10,12 @@ module.exports = {
         NODE_ENV: "production",
       },
     },
-    // {
-    //   name: "contactServer",
-    //   script: "./api/contactServer.js",
-    //   watch: true,
-    //   ignore_watch: ["node_modules"],
-    // },
+    {
+      name: "contactServer",
+      script: "./api/contactServer.js",
+      watch: true,
+      ignore_watch: ["node_modules"],
+    },
   ],
 
   // deploy : {
