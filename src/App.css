@@ -25,6 +25,27 @@ html {
   height: auto;
 }
 
+.itemTitle {
+  font-size: 20pt;
+  display: block;
+  font-weight: bold;
+}
+
+.itemDetails {
+  font-size: 12pt;
+  display: block;
+}
+
+.itemDate {
+  font-size: 10pt;
+  display: block;
+}
+
+.itemInformation {
+  font-size: 11pt;
+  display: block;
+}
+
 html {
   /* padding-left: 15px;
   padding-right: 15px; */

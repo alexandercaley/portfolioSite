@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, ListGroup, ListGroupItem, Image } from "react-bootstrap";
 
-import image from "../../assets/IMG_1092.jpeg";
+import selfPortrait from "../../assets/selfPortrait.jpeg";
 
 import resumeGlyph from "../../assets/glyphs/resumeGlyph.png";
 import mailGlyph from "../../assets/glyphs/mailGlyph.png";
@@ -17,7 +17,11 @@ class PersonCard extends React.Component {
         bg="dark"
         text="white"
       >
-        <Card.Img style={{ borderRadius: "20px" }} variant="top" src={image} />
+        <Card.Img
+          style={{ borderRadius: "20px" }}
+          variant="top"
+          src={selfPortrait}
+        />
         <Card.Body>
           <Card.Title
             style={{

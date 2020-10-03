@@ -1,6 +1,8 @@
 import React from "react";
 
-import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
+import { Card, ListGroup, ListGroupItem, Image } from "react-bootstrap";
+
+import capGlyph from "../../assets/glyphs/capGlyph.png";
 
 class EducationCard extends React.Component {
   render() {
@@ -13,21 +15,38 @@ class EducationCard extends React.Component {
         style={{ borderRadius: "20px" }}
       >
         <Card.Body>
-          <Card.Title style={{ textAlign: "left", fontWeight: "bold" }}>
+          <Card.Title
+            style={{ textAlign: "left", fontWeight: "bold", fontSize: "25pt" }}
+          >
+            <Image
+              src={capGlyph}
+              rounded
+              style={{
+                maxHeight: "40px",
+                paddingRight: "15px",
+              }}
+            />
             Education
           </Card.Title>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </Card.Text>
         </Card.Body>
         <ListGroup
           className="list-group-flush"
           style={{ textAlign: "left", borderRadius: "20px" }}
         >
-          <ListGroupItem variant="info">Resumé</ListGroupItem>
-          <ListGroupItem variant="info">email</ListGroupItem>
-          <ListGroupItem variant="info">Social Media</ListGroupItem>
+          <ListGroupItem variant="info">
+            <label className="itemTitle">B.S., Computer Science</label>
+            <label className="itemDetails">
+              San Francisco State University
+            </label>
+            <label className="itemDate">2017-2020</label>
+          </ListGroupItem>
+          <ListGroupItem variant="info">
+            <label className="itemTitle">
+              Associates Degree, Computer Science
+            </label>
+            <label className="itemDetails">Pasadena City College</label>
+            <label className="itemDate">2014-2017</label>
+          </ListGroupItem>
         </ListGroup>
       </Card>
     );
