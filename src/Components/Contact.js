@@ -40,7 +40,7 @@ class Contact extends React.Component {
 
     axios
       .post(
-        "ec2-user@ec2-18-191-86-76.us-east-2.compute.amazonaws.com:4000/api/email",
+        "http://ec2-user@ec2-18-191-86-76.us-east-2.compute.amazonaws.com:4000/api/email",
         payload
       )
       .then((res) => {
