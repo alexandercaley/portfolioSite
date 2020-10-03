@@ -26,22 +26,26 @@ html {
 }
 
 .itemTitle {
+  text-align: left;
   font-size: 20pt;
   display: block;
   font-weight: bold;
 }
 
 .itemDetails {
+  text-align: left;
   font-size: 12pt;
   display: block;
 }
 
 .itemDate {
+  text-align: left;
   font-size: 10pt;
   display: block;
 }
 
 .itemInformation {
+  text-align: left;
   font-size: 11pt;
   display: block;
 }

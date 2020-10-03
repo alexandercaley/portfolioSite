@@ -31,7 +31,7 @@ class WorkExpCard extends React.Component {
         </Card.Body>
         <ListGroup
           className="list-group-flush"
-          style={{ textAlign: "left", borderRadius: "20px" }}
+          style={{ borderRadius: "20px" }}
         >
           <ListGroupItem variant="info">
             <label className="itemTitle">Genius</label>
