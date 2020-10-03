@@ -1,5 +1,6 @@
 import React from "react";
 import Contact from "../Components/Contact";
+import Footer from "../Components/ContactFooter";
 
 import { motion } from "framer-motion";
 
@@ -34,6 +35,8 @@ function ContactPage(props) {
           </Col>
         </Row>
       </Container>
+      <div style={{ paddingBottom: "11rem" }} />
+      <Footer />
     </div>
   );
 }

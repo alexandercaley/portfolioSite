@@ -66,7 +66,10 @@ class Contact extends React.Component {
   render() {
     return (
       <div>
-        <Form onSubmit={this.handleSubmit}>
+        <Form
+          onSubmit={this.handleSubmit}
+          style={{ maxWidth: `${this.props.maxWidth}` }}
+        >
           <Form.Group>
             {/* <Form.Label htmlFor="full-name" className="formLabel">
                       Full Name
