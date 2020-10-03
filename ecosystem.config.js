@@ -12,7 +12,7 @@ module.exports = {
     },
     {
       name: "contactServer",
-      script: "./api/contact.js",
+      script: "./api/contactServer.js",
       watch: true,
       ignore_watch: ["node_modules"],
     },
