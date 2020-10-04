@@ -3,6 +3,8 @@ import React from "react";
 import { Form, Button } from "react-bootstrap";
 import axios from "axios";
 
+let serverURL = "18.191.86.76:4000";
+
 class Contact extends React.Component {
   constructor(props) {
     super(props);
@@ -39,10 +41,7 @@ class Contact extends React.Component {
     };
 
     axios
-      .post(
-        "http://ec2-user@ec2-18-191-86-76.us-east-2.compute.amazonaws.com:4000/api/email",
-        payload
-      )
+      .post(`${serverURL}/api/email`, payload)
       .then((res) => {
         if (res.data.success) {
           this.setState({
