@@ -39,16 +39,16 @@ class PersonCard extends React.Component {
             establish a career in software development. Much of my work
             experience and academic experience over the past years has enabled
             me to hone my skills in contributing to the creating of innovative
-            solutions whether that be in an academic environemnt or in a work
-            environemnt. Through working at Apple I've become very comfortable
+            solutions whether that be in an academic environmnt or in a work
+            environmnt. Through working at Apple I've become very comfortable
             making the best of every sitation and always keeping a solutions
             based outlook on things, while my time in school has allowed me to
             meet some great people who I can work alongside in software
             development and really strengthen both my problem solving and
             communication skills. Aside from work I spend a lot of my time
-            'onewheeling' through San Francisco and like to spend time at the
-            nearby beach or Golden Gate Park and I really like to travel when I
-            get the chance.
+            'onewheeling' through San Francisco and like to find a chance to go
+            to the beach or Golden Gate Park as well as I really love to travel
+            when I get the chance.
           </Card.Text>
         </Card.Body>
         <ListGroup
