@@ -41,7 +41,7 @@ function App() {
         </Navbar>
         {/* Router Setup */}
         <Switch>
-          <Route path="/*">
+          <Route exact path="/">
             <Redirect to="/home" />
           </Route>
           <Route exact path="/home" component={Home} />
@@ -49,6 +49,7 @@ function App() {
           <Route exact path="/contact" component={ContactPage} />
           <Route path="/project/:id" component={ProjectPage} />
           <Route path="*" component={PageNotFound} />
+          <Route path="/*" component={Home} />
         </Switch>
       </Router>
     </div>
