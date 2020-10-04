@@ -41,7 +41,7 @@ class PersonCard extends React.Component {
             me to hone my skills in contributing to the creating of innovative
             solutions whether that be in an academic environment or in a work
             environment. Through working at Apple I've become very comfortable
-            making the best of every sitation and always keeping a solutions
+            making the best of every situation and always keeping a solutions
             based outlook on things, while my time in school has allowed me to
             meet some great people who I can work alongside in software
             development and really strengthen both my problem solving and
