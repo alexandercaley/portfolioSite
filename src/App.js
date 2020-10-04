@@ -48,8 +48,8 @@ function App() {
           <Route exact path="/projects" component={Projects} />
           <Route exact path="/contact" component={ContactPage} />
           <Route path="/project/:id" component={ProjectPage} />
+          <Route exact path="/pagenotfound" component={PageNotFound} />
           <Route path="*" component={PageNotFound} />
-          <Route path="/*" component={Home} />
         </Switch>
       </Router>
     </div>
