@@ -3,7 +3,7 @@ module.exports = {
     {
       name: "react-app",
       script: "npx",
-      args: "serve -p 3000 build",
+      args: "serve -p 80 build",
       watch: true,
 
       env_production: {
