@@ -41,7 +41,7 @@ function App() {
         </Navbar>
         {/* Router Setup */}
         <Switch>
-          <Route exact path="/">
+          <Route path="/*">
             <Redirect to="/home" />
           </Route>
           <Route exact path="/home" component={Home} />
