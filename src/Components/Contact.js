@@ -3,7 +3,7 @@ import React from "react";
 import { Form, Button } from "react-bootstrap";
 import axios from "axios";
 
-let serverURL = "http://18.191.86.76:4000";
+let serverURL = "http://3.129.66.169";
 
 class Contact extends React.Component {
   constructor(props) {
