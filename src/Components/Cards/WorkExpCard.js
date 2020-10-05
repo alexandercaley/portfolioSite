@@ -57,7 +57,7 @@ class WorkExpCard extends React.Component {
           <ListGroupItem variant="info">
             <label className="itemTitle">Freelance Software Engineer</label>
             <label className="itemDetails">Self-employed</label>
-            <label className="itemDate">2017-Current</label>
+            <label className="itemDate">2018-Current</label>
             <label className="itemInformation">
               • Developed and unit tested web, mobile, and native applications
               in various languages and frameworks including Java, Typescript,
