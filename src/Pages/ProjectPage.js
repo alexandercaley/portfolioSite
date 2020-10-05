@@ -113,7 +113,12 @@ function ProjectPage(props) {
         <Container fluid="md" style={{ padding: "25px" }}>
           <Card
             className="contextCard"
-            style={{ borderRadius: "20px" }}
+            style={{
+              borderRadius: "20px",
+              display: "inline-block",
+              width: "100%",
+              height: "100%",
+            }}
             bg="dark"
             text="white"
           >
@@ -124,6 +129,7 @@ function ProjectPage(props) {
             />
             <Card.Body>
               <Card.Title
+                className="cardTitle"
                 style={{
                   textAlign: "left",
                   fontWeight: "bold",

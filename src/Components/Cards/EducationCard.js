@@ -16,6 +16,7 @@ class EducationCard extends React.Component {
       >
         <Card.Body>
           <Card.Title
+            className="cardTitle"
             style={{ textAlign: "left", fontWeight: "bold", fontSize: "25pt" }}
           >
             <Image

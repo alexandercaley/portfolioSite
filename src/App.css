@@ -18,6 +18,14 @@ html {
 .body-text {
   padding-top: 10px;
   color: darkgrey;
+  font-family: "Roboto", sans-serif;
+}
+
+.cardTitle {
+  font-family: "Roboto", sans-serif;
+  text-align: "left";
+  font-weight: "bold";
+  font-size: "25pt";
 }
 
 .contextCard {

@@ -18,12 +18,13 @@ class PersonCard extends React.Component {
         text="white"
       >
         <Card.Img
-          style={{ borderRadius: "20px" }}
+          style={{ borderRadius: "25px", padding: "1rem" }}
           variant="top"
           src={selfPortrait}
         />
         <Card.Body>
           <Card.Title
+            className="cardTitle"
             style={{
               textAlign: "left",
               fontWeight: "bold",
