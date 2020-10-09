@@ -9,6 +9,7 @@ import shellImage from "../assets/projectImages/shellImage.png";
 import clippersImage from "../assets/projectImages/clippersImage.png";
 import greenworldImage from "../assets/projectImages/greenworldImage.png";
 import surgedateImage from "../assets/projectImages/surgedateImage.png";
+import websiteImage from "../assets/logo/logo_black.png";
 
 function Projects() {
   return (
@@ -33,7 +34,7 @@ function Projects() {
       >
         <Container fluid="xl">
           <Row>
-            <Col>
+            <Col md={6}>
               <Thumbnail
                 link="/project/surgeDate"
                 image={surgedateImage}
@@ -41,7 +42,7 @@ function Projects() {
                 category="Backend Server"
               />
             </Col>
-            <Col>
+            <Col md={6}>
               <Thumbnail
                 link="/project/redditLite"
                 image={redditImage}
@@ -49,7 +50,15 @@ function Projects() {
                 category="Full Stack Web App"
               />
             </Col>
-            <Col>
+            <Col md={6}>
+              <Thumbnail
+                link="/project/website"
+                image={websiteImage}
+                title="Portfolio Website"
+                category="Web Application / Contact Server"
+              />
+            </Col>
+            <Col md={6}>
               <Thumbnail
                 link="/project/greenWorld"
                 image={greenworldImage}
@@ -57,15 +66,7 @@ function Projects() {
                 category="Full Stack Web App"
               />
             </Col>
-            <Col>
-              <Thumbnail
-                link="/project/linuxShell"
-                image={shellImage}
-                title="Linux Shell"
-                category="C Program"
-              />
-            </Col>
-            <Col>
+            <Col md={6}>
               <Thumbnail
                 link="/project/clippersApp"
                 image={clippersImage}
@@ -73,7 +74,16 @@ function Projects() {
                 category="iOS Swift App"
               />
             </Col>
-            <Col>
+            <Col md={6}>
+              <Thumbnail
+                link="/project/linuxShell"
+                image={shellImage}
+                title="Linux Shell"
+                category="C Program"
+              />
+            </Col>
+
+            <Col md={6}>
               <Thumbnail
                 link="/project/tankGame"
                 image={tankImage}

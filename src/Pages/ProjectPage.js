@@ -15,6 +15,7 @@ import shellImage from "../assets/projectImages/shellImage.png";
 import clippersImage from "../assets/projectImages/clippersImage.png";
 import greenworldImage from "../assets/projectImages/greenworldImage.png";
 import surgedateImage from "../assets/projectImages/surgedateImage.png";
+import websiteImage from "../assets/logo/logo_black.png";
 
 function ProjectPage(props) {
   let projectData = new HashMap();
@@ -26,6 +27,8 @@ function ProjectPage(props) {
       description: "Java-based split-screen multiplayer tank game",
       image: tankImage,
       source: "https://github.com/alexandercaley/tankgame",
+      download:
+        "https://drive.google.com/file/d/1q45EkVuP6U6B3gBEb5oF5EOn01K99Rvs/view?usp=sharing",
     },
     "clippersApp",
     {
@@ -69,6 +72,14 @@ function ProjectPage(props) {
       description:
         "•Dating application that matches users based on their shared information\n•Node Servers for all backend tasks and microservices\n•Redis\n•JWT token\n•API Validation\n•Test driven development",
       image: surgedateImage,
+    },
+    "website",
+    {
+      name: "Portfolio Website",
+      year: "2020",
+      description: "Description here",
+      image: websiteImage,
+      source: "https://github.com/alexandercaley/portfolioSite",
     }
   );
   let { id } = useParams();
@@ -78,15 +89,27 @@ function ProjectPage(props) {
 
   let Source = () => {
     if (!projectData.get(id).source) {
-      return <label>Unavailable</label>;
+      return <label>Source Code: Unavailable</label>;
     }
     return (
       <Card.Link href={projectData.get(id).source} target="_blank">
+        Source Code:
         <Image
           src={githubGlyph}
           rounded
           style={{ maxHeight: "50px", paddingLeft: "15px" }}
         />
+      </Card.Link>
+    );
+  };
+
+  let Download = () => {
+    if (!projectData.get(id).download) {
+      return null;
+    }
+    return (
+      <Card.Link href={projectData.get(id).download} target="_blank">
+        Download Software
       </Card.Link>
     );
   };
@@ -147,7 +170,10 @@ function ProjectPage(props) {
                   {projectData.get(id).description}
                 </label>
                 <label className="itemDetails">
-                  Source Code: <Source />
+                  <Source />
+                </label>
+                <label className="itemDetails">
+                  <Download />
                 </label>
               </Card.Text>
             </Card.Body>
