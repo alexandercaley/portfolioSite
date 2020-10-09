@@ -2,7 +2,7 @@ module.exports = {
   apps: [
     {
       name: "reactServer",
-      script: "./api/reactServer.js",
+      script: "./reactServer.js",
       watch: true,
       ignore_watch: ["node_modules"],
     },
