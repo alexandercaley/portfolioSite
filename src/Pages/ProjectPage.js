@@ -52,7 +52,7 @@ function ProjectPage(props) {
       name: "GreenWorld",
       year: "2019",
       description:
-        "•Environmental social media site to create posts and attach them to a location\n•Involved with a team of 7 people\n•Lead the backend team\n•Created API’s for frontend to access data from AWS server\n•Constructed with Node and React",
+        "•Environmental social media site to create posts and attach them to a location\n•Involved with a team of 7 people\n•Lead the backend team\n•MySQL Database\n•Created API’s for frontend to access data from AWS server\n•Constructed with Node and React",
       image: greenworldImage,
       source: "https://github.com/alexandercaley/greenworld",
     },
@@ -61,7 +61,7 @@ function ProjectPage(props) {
       name: "Reddit Lite",
       year: "2019",
       description:
-        "•Lite version of Reddit for desktop and mobile devices\n•Node Backend\n•React Frontend\n•Lite version of reddit\n•Implemented all features with micro services\n•Used Redis for caching\n•Used Kafka for conveyer\n•5 Person Project",
+        "•Lite version of Reddit for desktop and mobile devices\n•Node Backend\n•MongoDB for tables\n•React Frontend\n•Lite version of reddit\n•Implemented all features with micro services\n•Used Redis for caching\n•Used Kafka for conveyer\n•5 Person Project",
       image: redditImage,
       source: "https://github.com/sfsu-csc667-fall19/final-project-redditlite",
     },
@@ -70,7 +70,7 @@ function ProjectPage(props) {
       name: "SurgeDate Server",
       year: "2020 (in progress)",
       description:
-        "•Dating application that matches users based on their shared information\n•Node Servers for all backend tasks and microservices\n•Redis\n•JWT token\n•API Validation\n•Test driven development",
+        "•Dating application that matches users based on their shared information\n•Node Servers for all backend tasks and microservices\n•Redis\n•JWT token\n•MongoDB\n•API Validation\n•Test driven development",
       image: surgedateImage,
     },
     "website",
