@@ -34,7 +34,7 @@ function Projects() {
       >
         <Container fluid="xl">
           <Row>
-            <Col md={6}>
+            <Col>
               <Thumbnail
                 link="/project/surgeDate"
                 image={surgedateImage}
@@ -42,7 +42,7 @@ function Projects() {
                 category="Backend Server"
               />
             </Col>
-            <Col md={6}>
+            <Col>
               <Thumbnail
                 link="/project/redditLite"
                 image={redditImage}
@@ -50,7 +50,7 @@ function Projects() {
                 category="Full Stack Web App"
               />
             </Col>
-            <Col md={6}>
+            <Col>
               <Thumbnail
                 link="/project/website"
                 image={websiteImage}
@@ -58,7 +58,7 @@ function Projects() {
                 category="Web Application / Contact Server"
               />
             </Col>
-            <Col md={6}>
+            <Col>
               <Thumbnail
                 link="/project/greenWorld"
                 image={greenworldImage}
@@ -66,7 +66,7 @@ function Projects() {
                 category="Full Stack Web App"
               />
             </Col>
-            <Col md={6}>
+            <Col>
               <Thumbnail
                 link="/project/clippersApp"
                 image={clippersImage}
@@ -74,7 +74,7 @@ function Projects() {
                 category="iOS Swift App"
               />
             </Col>
-            <Col md={6}>
+            <Col>
               <Thumbnail
                 link="/project/linuxShell"
                 image={shellImage}
@@ -83,7 +83,7 @@ function Projects() {
               />
             </Col>
 
-            <Col md={6}>
+            <Col>
               <Thumbnail
                 link="/project/tankGame"
                 image={tankImage}
