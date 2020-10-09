@@ -30,7 +30,7 @@ function Home(props) {
         <Container fluid={true}>
           <Row>
             <Col md={6}>
-              <div style={{ paddingBottom: "1rem", alignContent: "center" }}>
+              <div style={{ paddingBottom: "1rem" }}>
                 <PersonCard />
               </div>
             </Col>

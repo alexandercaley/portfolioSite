@@ -67,7 +67,7 @@ class Contact extends React.Component {
 
   render() {
     return (
-      <div>
+      <div style={{ display: "inline" }}>
         <Form
           onSubmit={this.handleSubmit}
           style={{ maxWidth: `${this.props.maxWidth}` }}
@@ -81,6 +81,7 @@ class Contact extends React.Component {
               name="name"
               type="text"
               placeholder="Full Name"
+              style={{ maxWidth: "1000px", display: "inline-block" }}
               value={this.state.name}
               onChange={this.handleChange}
             />
@@ -95,6 +96,7 @@ class Contact extends React.Component {
               name="email"
               type="email"
               placeholder="Email Address"
+              style={{ maxWidth: "1000px", display: "inline-block" }}
               value={this.state.email}
               onChange={this.handleChange}
             />
@@ -110,6 +112,7 @@ class Contact extends React.Component {
               placeholder="Message"
               as="textarea"
               rows="3"
+              style={{ maxWidth: "1000px", display: "inline-block" }}
               value={this.state.message}
               onChange={this.handleChange}
             />

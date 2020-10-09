@@ -12,7 +12,10 @@ class EducationCard extends React.Component {
         id="infoCard"
         bg="dark"
         text="white"
-        style={{ borderRadius: "20px" }}
+        style={{
+          borderRadius: "20px",
+          display: "inline-block",
+        }}
       >
         <Card.Body>
           <Card.Title

@@ -13,7 +13,7 @@ class PersonCard extends React.Component {
     return (
       <Card
         className="contextCard"
-        style={{ borderRadius: "20px" }}
+        style={{ borderRadius: "20px", display: "inline-block" }}
         bg="dark"
         text="white"
       >

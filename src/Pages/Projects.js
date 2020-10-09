@@ -13,7 +13,7 @@ import websiteImage from "../assets/logo/logo_black.png";
 
 function Projects() {
   return (
-    <div>
+    <div style={{ padding: "1rem" }}>
       <h1 className="title">Projects</h1>
       <motion.div
         initial="hidden"
@@ -32,8 +32,16 @@ function Projects() {
           },
         }}
       >
-        <Container fluid="xl">
+        <Container fluid={true}>
           <Row>
+            <Col>
+              <Thumbnail
+                link="/project/website"
+                image={websiteImage}
+                title="Portfolio Website"
+                category="Web Application / Contact Server"
+              />
+            </Col>
             <Col>
               <Thumbnail
                 link="/project/surgeDate"
@@ -48,14 +56,6 @@ function Projects() {
                 image={redditImage}
                 title="Reddit Lite"
                 category="Full Stack Web App"
-              />
-            </Col>
-            <Col>
-              <Thumbnail
-                link="/project/website"
-                image={websiteImage}
-                title="Portfolio Website"
-                category="Web Application / Contact Server"
               />
             </Col>
             <Col>
