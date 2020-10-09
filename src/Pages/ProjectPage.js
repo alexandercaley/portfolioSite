@@ -80,6 +80,7 @@ function ProjectPage(props) {
       description:
         "•This Portfolio website, alexandercaley.com\n•Built with React.js\n•Node server for contact with express\n•Used Bootstrap with React for styling\n•Deployed using AWS servers",
       image: websiteImage,
+      source: "https://github.com/alexandercaley/portfolioSite"
     }
   );
   let { id } = useParams();
