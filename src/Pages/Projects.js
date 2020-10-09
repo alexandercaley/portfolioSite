@@ -39,7 +39,7 @@ function Projects() {
                 link="/project/website"
                 image={websiteImage}
                 title="Portfolio Website"
-                category="Web Application / Contact Server"
+                category="Web Application"
               />
             </Col>
             <Col>
