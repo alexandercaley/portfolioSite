@@ -1,15 +1,22 @@
 module.exports = {
   apps: [
     {
-      name: "react-app",
-      script: "npx",
-      args: "serve -p 3000 build",
+      name: "reactServer",
+      script: "./api/reactServer.js",
       watch: true,
-
-      env_production: {
-        NODE_ENV: "production",
-      },
+      ignore_watch: ["node_modules"],
     },
+
+    // {
+    //   name: "react-app",
+    //   script: "npx",
+    //   args: "serve -p 3000 build",
+    //   watch: true,
+
+    //   env_production: {
+    //     NODE_ENV: "production",
+    //   },
+    // },
     {
       name: "contactServer",
       script: "./api/contactServer.js",
