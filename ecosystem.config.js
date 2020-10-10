@@ -1,8 +1,8 @@
 module.exports = {
   apps: [
     {
-      name: "reactServer",
-      script: "./reactServer.js",
+      name: "buildServer",
+      script: "./buildServer.js",
       watch: true,
       ignore_watch: ["node_modules"],
     },
