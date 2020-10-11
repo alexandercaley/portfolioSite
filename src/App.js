@@ -25,7 +25,7 @@ import logo from "./assets/logo/logo_trans.png";
 const history = createBrowserHistory();
 
 function App() {
-  ReactGA.initialize('UA-145691579-2');
+  ReactGA.initialize("UA-145691579-2");
 
   history.listen(location => {
     ReactGA.set({ page: location.pathname }); // Update the user's current page
