@@ -2,6 +2,7 @@ import React from "react";
 import Thumbnail from "../Components/Thumbnail";
 import { motion } from "framer-motion";
 import { Container, Row, Col } from "reactstrap";
+import { withRouter } from "react-router-dom";
 
 import tankImage from "../assets/projectImages/tankImage.png";
 import redditImage from "../assets/projectImages/redditImage.png";
@@ -98,4 +99,4 @@ function Projects() {
   );
 }
 
-export default Projects;
+export default withRouter(Projects);
