@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 
 import {
   BrowserRouter as Router,
@@ -14,7 +14,6 @@ import ProjectPage from "./Pages/ProjectPage";
 import PageNotFound from "./Pages/PageNotFound";
 
 import ReactGA from "react-ga";
-import { createBrowserHistory } from 'history';
 
 import { LinkContainer } from "react-router-bootstrap";
 import { Navbar, Nav } from "react-bootstrap";
@@ -22,19 +21,17 @@ import "./App.css";
 
 import logo from "./assets/logo/logo_trans.png";
 
-const history = createBrowserHistory();
-
 function App() {
-  ReactGA.initialize("UA-145691579-2");
 
-    history.listen(location => {
-      ReactGA.set({ page: window.location.pathname }); // Update the user's current page
-      ReactGA.pageview(window.location.pathname); // Record a pageview for the given page
-    });
+  useEffect(() => {
+    ReactGA.initialize("UA-145691579-2");
+    
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
 
   return (
     <div className="App">
-      <Router history={history}>
+      <Router>
         <Navbar fixed="top" bg="dark" variant="dark">
           <Navbar.Brand style={{ alignContent: "center" }}>
             <img src={logo} className="logo" alt="" />
