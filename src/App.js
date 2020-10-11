@@ -1,5 +1,4 @@
 import React from "react";
-import { useEffect } from "react";
 
 import {
   BrowserRouter as Router,
@@ -26,14 +25,12 @@ import logo from "./assets/logo/logo_trans.png";
 const history = createBrowserHistory();
 
 function App() {
-  useEffect(() => {
-    ReactGA.initialize("UA-145691579-2");
+  ReactGA.initialize("UA-145691579-2");
 
     history.listen(location => {
-      ReactGA.set({ page: location.pathname }); // Update the user's current page
-      ReactGA.pageview(location.pathname); // Record a pageview for the given page
+      ReactGA.set({ page: window.location.pathname }); // Update the user's current page
+      ReactGA.pageview(window.location.pathname); // Record a pageview for the given page
     });
-  }, [])
 
   return (
     <div className="App">
