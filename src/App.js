@@ -13,7 +13,6 @@ import ContactPage from "./Pages/ContactPage";
 import ProjectPage from "./Pages/ProjectPage";
 import PageNotFound from "./Pages/PageNotFound";
 
-import { analyticsID } from "./keys";
 import ReactGA from "react-ga";
 import { createBrowserHistory } from 'history';
 
@@ -26,7 +25,7 @@ import logo from "./assets/logo/logo_trans.png";
 const history = createBrowserHistory();
 
 function App() {
-  ReactGA.initialize(analyticsID);
+  ReactGA.initialize('UA-145691579-2');
 
   history.listen(location => {
     ReactGA.set({ page: location.pathname }); // Update the user's current page
