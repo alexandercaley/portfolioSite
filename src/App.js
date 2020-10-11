@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React from "react";
 
 import {
   BrowserRouter as Router,
@@ -13,7 +13,7 @@ import ContactPage from "./Pages/ContactPage";
 import ProjectPage from "./Pages/ProjectPage";
 import PageNotFound from "./Pages/PageNotFound";
 
-import ReactGA from "react-ga";
+import useGoogleAnalytics from "./GoogleAnalytics/useGoogleAnalytics";
 
 import { LinkContainer } from "react-router-bootstrap";
 import { Navbar, Nav } from "react-bootstrap";
@@ -21,14 +21,24 @@ import "./App.css";
 
 import logo from "./assets/logo/logo_trans.png";
 
+function Routes() {
+  useGoogleAnalytics();
+
+  return(
+    <Switch>
+      <Route exact path="/">
+        <Redirect to="/home" />
+      </Route>
+      <Route exact path="/home" component={Home} />
+      <Route exact path="/projects" component={Projects} />
+      <Route exact path="/contact" component={ContactPage} />
+      <Route path="/project/:id" component={ProjectPage} />
+      <Route path="*" component={PageNotFound} />
+    </Switch>
+  )
+}
+
 function App() {
-
-  useEffect(() => {
-    ReactGA.initialize("UA-145691579-2");
-    
-    ReactGA.pageview(window.location.pathname + window.location.search);
-  }, []);
-
   return (
     <div className="App">
       <Router>
@@ -48,17 +58,7 @@ function App() {
             </LinkContainer>
           </Nav>
         </Navbar>
-        {/* Router Setup */}
-        <Switch>
-          <Route exact path="/">
-            <Redirect to="/home" />
-          </Route>
-          <Route exact path="/home" component={Home} />
-          <Route exact path="/projects" component={Projects} />
-          <Route exact path="/contact" component={ContactPage} />
-          <Route path="/project/:id" component={ProjectPage} />
-          <Route path="*" component={PageNotFound} />
-        </Switch>
+        <Routes />
       </Router>
     </div>
   );
