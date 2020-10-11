@@ -13,29 +13,16 @@ import ContactPage from "./Pages/ContactPage";
 import ProjectPage from "./Pages/ProjectPage";
 import PageNotFound from "./Pages/PageNotFound";
 
-import { analyticsID } from "./keys";
-import ReactGA from "react-ga";
-import { createBrowserHistory } from 'history';
-
 import { LinkContainer } from "react-router-bootstrap";
 import { Navbar, Nav } from "react-bootstrap";
 import "./App.css";
 
 import logo from "./assets/logo/logo_trans.png";
 
-const history = createBrowserHistory();
-
 function App() {
-  ReactGA.initialize(analyticsID);
-
-  history.listen(location => {
-    ReactGA.set({ page: location.pathname }); // Update the user's current page
-    ReactGA.pageview(location.pathname); // Record a pageview for the given page
-  });
-
   return (
     <div className="App">
-      <Router history={history}>
+      <Router>
         <Navbar fixed="top" bg="dark" variant="dark">
           <Navbar.Brand style={{ alignContent: "center" }}>
             <img src={logo} className="logo" alt="" />
