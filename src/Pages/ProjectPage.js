@@ -147,7 +147,7 @@ function ProjectPage(props) {
             text="white"
           >
             <Card.Img
-              style={{ borderRadius: "20px" }}
+              style={{ borderRadius: "30px", padding: "1rem" }}
               variant="top"
               src={projectData.get(id).image}
             />
