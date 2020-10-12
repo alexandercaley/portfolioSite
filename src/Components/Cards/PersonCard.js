@@ -21,7 +21,7 @@ class PersonCard extends React.Component {
         text="white"
       >
         <Card.Img
-          style={{ borderRadius: "25px", padding: "1rem" }}
+          style={{ borderRadius: "30px", padding: "1rem" }}
           variant="top"
           src={selfPortrait}
         />
