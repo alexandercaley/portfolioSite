@@ -35,6 +35,23 @@ class WorkExpCard extends React.Component {
           style={{ borderRadius: "20px" }}
         >
           <ListGroupItem variant="info">
+            <label className="itemTitle">Freelance Software Engineer</label>
+            <label className="itemDetails">Self-employed</label>
+            <label className="itemDate">2018-Current</label>
+            <label className="itemInformation">
+              • Developed and unit tested web, mobile, and native applications
+              in various languages and frameworks including Java, Typescript,
+              Javascript, Node.js, React, C, Swift in combination with several
+              other technologies
+            </label>
+            <label className="itemInformation">
+              • A list of relevant projects along with GitHub repo's and
+              README's can be found in the Projects section of my LinkedIn page
+              ranging from personal projects to projects with groups up to 7
+              people
+            </label>
+          </ListGroupItem>
+          <ListGroupItem variant="info">
             <label className="itemTitle">Genius</label>
             <label className="itemDetails">Apple Part-Time</label>
             <label className="itemDate">2017-Current</label>
@@ -52,23 +69,6 @@ class WorkExpCard extends React.Component {
             <label className="itemInformation">
               • Developed a comprehensive technical know-how for addressing
               complex problems.
-            </label>
-          </ListGroupItem>
-          <ListGroupItem variant="info">
-            <label className="itemTitle">Freelance Software Engineer</label>
-            <label className="itemDetails">Self-employed</label>
-            <label className="itemDate">2018-Current</label>
-            <label className="itemInformation">
-              • Developed and unit tested web, mobile, and native applications
-              in various languages and frameworks including Java, Typescript,
-              Javascript, Node.js, React, C, Swift in combination with several
-              other technologies
-            </label>
-            <label className="itemInformation">
-              • A list of relevant projects along with GitHub repo's and
-              README's can be found in the Projects section of my LinkedIn page
-              ranging from personal projects to projects with groups up to 7
-              people
             </label>
           </ListGroupItem>
           <ListGroupItem variant="info">
