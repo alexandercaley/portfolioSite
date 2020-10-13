@@ -140,8 +140,8 @@ function ProjectPage(props) {
             style={{
               borderRadius: "20px",
               display: "inline-block",
-              width: "100%",
-              height: "100%",
+              width: "auto",
+              height: "auto",
             }}
             bg="dark"
             text="white"
