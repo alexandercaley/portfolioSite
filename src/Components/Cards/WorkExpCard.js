@@ -12,7 +12,11 @@ class WorkExpCard extends React.Component {
         id="infoCard"
         bg="dark"
         text="white"
-        style={{ borderRadius: "20px", display: "inline-block" }}
+        style={{
+          borderRadius: "20px",
+          marginLeft: "auto",
+          marginRight: "auto"
+        }}
       >
         <Card.Body>
           <Card.Title

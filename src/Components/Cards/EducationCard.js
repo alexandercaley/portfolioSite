@@ -14,7 +14,8 @@ class EducationCard extends React.Component {
         text="white"
         style={{
           borderRadius: "20px",
-          display: "inline-block",
+          marginLeft: "auto",
+          marginRight: "auto"
         }}
       >
         <Card.Body>
