@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 
 const sendGrid = require("@sendgrid/mail");
-const keys = require("../src/keys");
+const keys = require("./keys");
 
 const port = 4000;
 
