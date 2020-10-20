@@ -64,7 +64,7 @@ class PersonCard extends React.Component {
                 rounded
                 style={{ maxHeight: "20px", paddingRight: "15px" }}
               />
-              Resumé
+              Résumé
             </Card.Link>
           </ListGroupItem>
           <ListGroupItem variant="info">
