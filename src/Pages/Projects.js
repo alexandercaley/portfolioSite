@@ -28,7 +28,7 @@ function Projects() {
   };
 
   return (
-    <div style={{ padding: "1rem" }}>
+    <div>
       <h1 className="title">Projects</h1>
       <motion.div
         initial="hidden"
