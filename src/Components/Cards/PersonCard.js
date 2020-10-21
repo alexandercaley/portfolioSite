@@ -19,7 +19,7 @@ class PersonCard extends React.Component {
         style={{
           borderRadius: "20px",
           marginLeft: "auto",
-          marginRight: "auto"
+          marginRight: "auto",
         }}
         bg="dark"
         text="white"
