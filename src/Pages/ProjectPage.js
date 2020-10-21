@@ -69,7 +69,8 @@ function ProjectPage(props) {
             className="contextCard"
             style={{
               borderRadius: "20px",
-              display: "inline-block",
+              marginLeft: "auto",
+              marginRight: "auto",
               width: "auto",
               height: "auto",
             }}
