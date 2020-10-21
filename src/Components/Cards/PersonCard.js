@@ -10,9 +10,6 @@ import linkedInGlyph from "../../assets/glyphs/linkedInGlyph.png";
 
 class PersonCard extends React.Component {
   render() {
-    let bio =
-      "Hi there! My name is Alexander. Three years ago I moved from Glendale, CA. to San Francisco to attend school. I recently graduated with a degree in Computer Science and I'm looking to pursue a career in software development. Much of my experience over the past several years has enabled me to hone my development skills in creating innovative solutions in both my academic and work environments.\nAs a result of working at Apple, I have gained various skills including making the best of every customer interaction and always maintaining a solution based outlook on things. My academic experience has paved the way for me to strengthen my problem solving and communication skills and also to meet knowledgeable people, several of whom I work with in software development.\nAside from work, I spend a lot of my free time 'onewheeling' through San Francisco, often going to the beach or Golden Gate Park. Additionally, I love to travel and explore the world when I have the opportunity.";
-
     return (
       <Card
         className="contextCard"
@@ -43,11 +40,28 @@ class PersonCard extends React.Component {
           <Card.Text
             style={{
               textAlign: "left",
-              whiteSpace: "pre-line",
               fontSize: "14pt",
             }}
           >
-            {bio}
+            Hi there! My name is Alexander. Three years ago I moved from
+            Glendale, CA. to San Francisco to attend school. I recently
+            graduated with a degree in Computer Science and I'm looking to
+            pursue a career in software development. Much of my experience over
+            the past several years has enabled me to hone my development skills
+            in creating innovative solutions in both my academic and work
+            environments.
+            <br />
+            As a result of working at Apple, I have gained various skills
+            including making the best of every customer interaction and always
+            maintaining a solution based outlook on things. My academic
+            experience has paved the way for me to strengthen my problem solving
+            and communication skills and also to meet knowledgeable people,
+            several of whom I work with in software development.
+            <br />
+            Aside from work, I spend a lot of my free time 'onewheeling' through
+            San Francisco, often going to the beach or Golden Gate Park.
+            Additionally, I love to travel and explore the world when I have the
+            opportunity.
           </Card.Text>
         </Card.Body>
         <ListGroup
