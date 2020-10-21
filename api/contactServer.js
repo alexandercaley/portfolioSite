@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 
 const sendGrid = require("@sendgrid/mail");
-const keys = require("./keys");
+const { sendgridKey } = require("./keys");
 
 const port = 4000;
 
@@ -30,7 +30,7 @@ app.get("/api", (_, res) => {
 app.post("/api/email", (req, res) => {
   console.log(req.body);
 
-  sendGrid.setApiKey(keys.sendgridKey());
+  sendGrid.setApiKey(sendgridKey);
   const msg = {
     to: "alexandercaley@gmail.com",
     from: "me@alexandercaley.com",
