@@ -24,7 +24,7 @@ import logo from "./assets/logo/logo_trans.png";
 function Routes() {
   useGoogleAnalytics();
 
-  return(
+  return (
     <Switch>
       <Route exact path="/">
         <Redirect to="/home" />
@@ -35,7 +35,7 @@ function Routes() {
       <Route path="/project/:id" component={ProjectPage} />
       <Route path="*" component={PageNotFound} />
     </Switch>
-  )
+  );
 }
 
 function App() {
@@ -43,7 +43,7 @@ function App() {
     <div className="App">
       <Router>
         <Navbar fixed="top" bg="dark" variant="dark">
-          <Navbar.Brand style={{ alignContent: "center" }}>
+          <Navbar.Brand style={{ alignContent: "center" }} href="/">
             <img src={logo} className="logo" alt="" />
           </Navbar.Brand>
           <Nav className="mr-auto">
