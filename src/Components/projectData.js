@@ -21,7 +21,7 @@ projectData.set("surgeDate", {
   category: "Backend Server",
   year: "2020 (in progress)",
   description:
-    "•Dating application that matches users based on their shared information\n•Node Servers for all backend tasks and microservices\n•Redis\n•JWT token\n•MongoDB\n•API Validation\n•Mocha testing\n•Test driven development",
+    "•Dating application that matches users based on their shared information\n•Node Servers for all backend tasks and microservices\n•Typescript\n•Redis\n•JWT token\n•MongoDB\n•API Validation\n•Mocha testing\n•Test driven development",
   image: surgedateImage,
 });
 projectData.set("redditLite", {
