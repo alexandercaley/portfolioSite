@@ -2,7 +2,7 @@ import React from "react";
 
 import PageNotFound from "./PageNotFound";
 
-import projectData from "../Components/projectData";
+import projectData from "../Data/projectData";
 
 import { useParams } from "react-router";
 

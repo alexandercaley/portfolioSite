@@ -3,7 +3,7 @@ import Thumbnail from "../Components/Thumbnail";
 import { motion } from "framer-motion";
 import { Container, Row, Col } from "reactstrap";
 
-import projectData from "../Components/projectData";
+import projectData from "../Data/projectData";
 
 function Projects() {
   let DrawThumbnails = () => {
