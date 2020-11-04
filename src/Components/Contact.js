@@ -121,7 +121,7 @@ class Contact extends React.Component {
           <div>
             <Button
               className="d-inline-block"
-              variant="primary"
+              variant="info"
               type="submit"
               disabled={this.state.disabled}
             >

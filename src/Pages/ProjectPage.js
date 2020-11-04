@@ -8,7 +8,7 @@ import { useParams } from "react-router";
 
 import { motion } from "framer-motion";
 import { Container } from "reactstrap";
-import { Card, Image } from "react-bootstrap";
+import { Card, Image, Button } from "react-bootstrap";
 
 import githubGlyph from "../assets/glyphs/githubGlyph.png";
 
@@ -23,14 +23,13 @@ function ProjectPage(props) {
       return null;
     }
     return (
-      <Card.Link href={projectData.get(id).source} target="_blank">
-        Source Code:
+      <Button href={projectData.get(id).source} target="_blank" variant="info">
         <Image
           src={githubGlyph}
-          rounded
-          style={{ maxHeight: "50px", paddingLeft: "15px" }}
+          style={{ maxHeight: "30px", paddingRight: "5px" }}
         />
-      </Card.Link>
+        Source Code
+      </Button>
     );
   };
 
@@ -39,9 +38,13 @@ function ProjectPage(props) {
       return null;
     }
     return (
-      <Card.Link href={projectData.get(id).download} target="_blank">
+      <Button
+        href={projectData.get(id).download}
+        target="_blank"
+        variant="info"
+      >
         Download Software
-      </Card.Link>
+      </Button>
     );
   };
 
