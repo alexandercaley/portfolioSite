@@ -1,11 +1,6 @@
 import React from "react";
 
-import {
-  BrowserRouter as Router,
-  Route,
-  Redirect,
-  Switch,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Home from "./Pages/Home";
 import Projects from "./Pages/Projects";
@@ -26,10 +21,7 @@ function Routes() {
 
   return (
     <Switch>
-      <Route exact path="/">
-        <Redirect to="/home" />
-      </Route>
-      <Route exact path="/home" component={Home} />
+      <Route exact path="/" component={Home} />
       <Route exact path="/projects" component={Projects} />
       <Route exact path="/contact" component={ContactPage} />
       <Route path="/project/:id" component={ProjectPage} />
@@ -47,7 +39,7 @@ function App() {
             <img src={logo} className="logo" alt="" />
           </Navbar.Brand>
           <Nav className="mr-auto">
-            <LinkContainer to="/home">
+            <LinkContainer exact to="/">
               <Nav.Link>Home</Nav.Link>
             </LinkContainer>
             <LinkContainer to="/projects">
