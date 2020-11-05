@@ -1,6 +1,11 @@
 import React from "react";
 
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from "react-router-dom";
 
 import Home from "./Pages/Home";
 import Projects from "./Pages/Projects";
@@ -21,6 +26,7 @@ function Routes() {
 
   return (
     <Switch>
+      <Redirect exact from="/home" to="/" />
       <Route exact path="/" component={Home} />
       <Route exact path="/projects" component={Projects} />
       <Route exact path="/contact" component={ContactPage} />
