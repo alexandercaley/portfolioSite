@@ -32,7 +32,7 @@ class PersonCard extends React.Component {
             style={{
               textAlign: "left",
               fontWeight: "bold",
-              fontSize: "25pt",
+              fontSize: "20pt",
             }}
           >
             Alexander Caley

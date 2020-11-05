@@ -15,13 +15,13 @@ class EducationCard extends React.Component {
         style={{
           borderRadius: "20px",
           marginLeft: "auto",
-          marginRight: "auto"
+          marginRight: "auto",
         }}
       >
         <Card.Body>
           <Card.Title
             className="cardTitle"
-            style={{ textAlign: "left", fontWeight: "bold", fontSize: "25pt" }}
+            style={{ textAlign: "left", fontWeight: "bold", fontSize: "20pt" }}
           >
             <Image
               src={capGlyph}
