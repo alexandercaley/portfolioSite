@@ -35,10 +35,12 @@ function App() {
     <div className="App">
       <Router>
         <Navbar fixed="top" bg="dark" variant="dark">
-          <Navbar.Brand style={{ alignContent: "center" }} href="/">
-            <img src={logo} className="logo" alt="" />
-          </Navbar.Brand>
           <Nav className="mr-auto">
+            <LinkContainer exact to="/">
+              <Nav.Link style={{ alignContent: "center" }}>
+                <img src={logo} className="logo" alt="" />
+              </Nav.Link>
+            </LinkContainer>
             <LinkContainer exact to="/">
               <Nav.Link>Home</Nav.Link>
             </LinkContainer>
