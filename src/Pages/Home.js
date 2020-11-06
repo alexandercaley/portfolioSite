@@ -9,7 +9,7 @@ import WorkExpCard from "../Components/Cards/WorkExpCard";
 function Home(props) {
   return (
     <div>
-      <h1 className="title">Home</h1>
+      <h1 className="title">Alexander Caley</h1>
       <motion.div
         initial="hidden"
         animate="visible"

@@ -35,7 +35,7 @@ class PersonCard extends React.Component {
               fontSize: "20pt",
             }}
           >
-            Alexander Caley
+            About Me
           </Card.Title>
           <Card.Text
             style={{
