@@ -12,7 +12,7 @@ projectData.set("website", {
   category: "Web Application",
   year: "2020",
   description:
-    "•This Portfolio website, alexandercaley.com\n•Built with React.js\n•Node server for contact with express\n•Used Bootstrap with React for styling\n•Deployed using AWS servers",
+    "•This Portfolio website, alexandercaley.com\n•Built with React.js\n•Node server for contact with express\n•Used Bootstrap with React for styling\n•Deployed using a Linode server",
   image: websiteImage,
   source: "https://github.com/alexandercaley/portfolioSite",
 });
