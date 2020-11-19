@@ -18,6 +18,17 @@ function ProjectPage(props) {
     return <PageNotFound />;
   }
 
+  let Description = () => {
+    return (
+      <div>
+        {projectData.get(id).description.map((item) => {
+          return <div className="itemDetails">•{item}</div>;
+        })}
+        <br />
+      </div>
+    );
+  };
+
   let Source = () => {
     if (!projectData.get(id).source) {
       return null;
@@ -98,12 +109,7 @@ function ProjectPage(props) {
               </Card.Title>
               <Card.Text>
                 <label className="itemDate">{projectData.get(id).year}</label>
-                <label
-                  className="itemDetails"
-                  style={{ whiteSpace: "pre-line" }}
-                >
-                  {projectData.get(id).description}
-                </label>
+                <Description />
                 <label className="itemDetails">
                   <Source />
                 </label>
