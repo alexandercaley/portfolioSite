@@ -5,7 +5,7 @@ const cors = require("cors");
 const sendGrid = require("@sendgrid/mail");
 const { sendgridKey } = require("./keys");
 
-const port = 4000;
+const port = process.env.PORT || 4000;
 
 const app = express();
 
