@@ -1,10 +1,12 @@
-version: "3"
+version: "3.8"
 services:
   frontend:
     build: frontend/
+    image: alexcaley/frontend_website:1.0
     ports:
       - "3000:3000"
   backend:
     build: backend/
+    image: alexcaley/backend_website:1.0
     ports:
       - "4000:4000"
