@@ -23,11 +23,11 @@ app.use((_, res, next) => {
   next();
 });
 
-app.get("/api", (_, res) => {
+app.get("/", (_, res) => {
   res.send("API STATUS: Running!");
 });
 
-app.post("/api/email", (req, res) => {
+app.post("/email", (req, res) => {
   console.log(req.body);
 
   sendGrid.setApiKey(sendgridKey);
