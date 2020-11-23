@@ -14,7 +14,11 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.use((_, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "alexandercaley.com");
+  res.setHeader(
+    "Access-Control-Allow-Origin",
+    "https://www.alexandercaley.com"
+  );
+  res.setHeader("Access-Control-Allow-Origin", "https://alexandercaley.com");
   res.setHeader(
     "Access-Control-Allow-Methods",
     "GET, POST, PUT, PATCH, DELETE"
