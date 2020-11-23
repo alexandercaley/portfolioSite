@@ -29,7 +29,7 @@ app.use((req, res, next) => {
   return next();
 });
 
-app.get("/", (_, res) => {
+app.get("/status", (_, res) => {
   res.send("API STATUS: Running!");
 });
 
