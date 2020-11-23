@@ -22,7 +22,9 @@ app.use((req, res, next) => {
   if (allowedOrigins.includes(origin)) {
     res.setHeader("Access-Control-Allow-Origin", origin);
   } else {
-    res.setHeader("Access-Control-Allow-Origin", null);
+    res.status(404).json({
+      success: false,
+    });
   }
 
   res.setHeader(
