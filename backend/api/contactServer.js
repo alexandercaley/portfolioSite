@@ -22,9 +22,7 @@ app.use((req, res, next) => {
   if (allowedOrigins.includes(origin)) {
     res.setHeader("Access-Control-Allow-Origin", origin);
   } else {
-    res.status(404).json({
-      success: false,
-    });
+    return res.status(404).send("UNABLE TO CONNECT TO SERVER");
   }
 
   res.setHeader(
