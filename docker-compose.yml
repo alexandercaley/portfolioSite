@@ -4,9 +4,9 @@ services:
     build: frontend/
     image: alexcaley/frontend_website:1.0
     ports:
-            - "127.0.0.1:3000:3000"
+      - "127.0.0.1:3000:3000"
   backend:
     build: backend/
     image: alexcaley/backend_website:1.0
     ports:
-            - "127.0.0.1:4000:4000"
+      - "127.0.0.1:4000:4000"
