@@ -9,21 +9,22 @@ const port = process.env.PORT || 4000;
 
 const app = express();
 
+let originAuth = (req, res, next) => {
+  if(req.headers.origin == "https://www.alexandercaley.com") {
+    return next();
+  } else {
+    res.status(200).json({
+      success: false,
+    });
+  }
+}
+
 app.use(bodyParser.json());
 
 app.use(cors());
 
-app.use((req, res, next) => {
-  const allowedOrigins = [
-    "https://www.alexandercaley.com",
-    "https://alexandercaley.com",
-  ];
-  const origin = req.headers.origin;
-  if (allowedOrigins.includes(origin)) {
-    res.setHeader("Access-Control-Allow-Origin", origin);
-  } else {
-    return res.status(404).send("UNABLE TO CONNECT TO SERVER");
-  }
+app.use((_, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "https://www.alexandercaley.com");
 
   res.setHeader(
     "Access-Control-Allow-Methods",
@@ -38,7 +39,7 @@ app.get("/status", (_, res) => {
   res.send("API STATUS: Running!");
 });
 
-app.post("/email", (req, res) => {
+app.post("/email", [originAuth, (req, res) => {
   console.log(req.body);
 
   sendGrid.setApiKey(sendgridKey);
@@ -62,6 +63,6 @@ app.post("/email", (req, res) => {
         success: false,
       });
     });
-});
+}]);
 
 app.listen(port, () => console.log(`app listening on port ${port}!`));
