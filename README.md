@@ -4,4 +4,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Portfolio web app built with React and Node.
 
-## Domain at http://www.alexandercaley.com
+## Domain at https://www.alexandercaley.com
