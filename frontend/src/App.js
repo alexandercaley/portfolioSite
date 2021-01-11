@@ -6,6 +6,7 @@ import {
   Switch,
   Redirect,
 } from "react-router-dom";
+import ScrollToTop from "./Components/ScrollToTop";
 
 import Home from "./Pages/Home";
 import Projects from "./Pages/Projects";
@@ -58,7 +59,9 @@ function App() {
             </LinkContainer>
           </Nav>
         </Navbar>
-        <Routes />
+        <ScrollToTop>
+          <Routes />
+        </ScrollToTop>
       </Router>
     </div>
   );
