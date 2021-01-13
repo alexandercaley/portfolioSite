@@ -1,5 +1,5 @@
 ## Alexander Caley
 
-Portfolio Project using React Frontend and Node Backend
+Node Contact Server
 
 ## Domain at https://www.alexandercaley.com
