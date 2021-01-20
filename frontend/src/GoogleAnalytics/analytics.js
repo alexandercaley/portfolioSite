@@ -16,8 +16,10 @@ function sendPageview(path) {
   ReactGA.pageview(path);
 }
 
-export default {
+let analytics = {
   init,
   sendEvent,
   sendPageview,
 };
+
+export default analytics;

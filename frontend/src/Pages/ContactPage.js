@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 import { Container, Row, Col } from "reactstrap";
 
-function ContactPage(props) {
+function ContactPage() {
   return (
     <div>
       <h1 className="title">Contact</h1>

@@ -6,7 +6,7 @@ import PersonCard from "../Components/Cards/PersonCard";
 import EducationCard from "../Components/Cards/EducationCard";
 import WorkExpCard from "../Components/Cards/WorkExpCard";
 
-function Home(props) {
+function Home() {
   return (
     <div>
       <h1 className="title">Alexander Caley</h1>

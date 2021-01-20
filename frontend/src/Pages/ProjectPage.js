@@ -12,7 +12,7 @@ import { Card, Image, Button } from "react-bootstrap";
 
 import githubGlyph from "../assets/glyphs/githubGlyph.png";
 
-function ProjectPage(props) {
+function ProjectPage() {
   let { id } = useParams();
   if (!projectData.has(id)) {
     return <PageNotFound />;
