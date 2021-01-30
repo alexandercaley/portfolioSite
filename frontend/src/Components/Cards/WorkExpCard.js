@@ -39,9 +39,26 @@ class WorkExpCard extends React.Component {
           style={{ borderRadius: "20px" }}
         >
           <ListGroupItem variant="info">
+            <label className="itemTitle">News iOS Engineer and Screener</label>
+            <label className="itemDetails">Apple</label>
+            <label className="itemDate">2021-Current</label>
+            <label className="itemInformation">• Swift/Objective-C</label>
+            <label className="itemInformation">
+              • Triage incoming bug reports for News.
+            </label>
+            <label className="itemInformation">
+              • Work closely with QA to reproduce issues and identify when they
+              started occurring.
+            </label>
+            <label className="itemInformation">
+              • Prioritized and assigned issues for fixing and used tools to
+              deep dive and isolate bugs, propose fixes for team review.
+            </label>
+          </ListGroupItem>
+          <ListGroupItem variant="info">
             <label className="itemTitle">Freelance Software Engineer</label>
             <label className="itemDetails">Self-employed</label>
-            <label className="itemDate">2018-Current</label>
+            <label className="itemDate">2018-2020</label>
             <label className="itemInformation">
               • Developed and unit tested web, mobile, and native applications
               in various languages and frameworks including Java, Typescript,
@@ -57,8 +74,8 @@ class WorkExpCard extends React.Component {
           </ListGroupItem>
           <ListGroupItem variant="info">
             <label className="itemTitle">Genius</label>
-            <label className="itemDetails">Apple Part-Time</label>
-            <label className="itemDate">2017-Current</label>
+            <label className="itemDetails">Apple Part-Time</label>
+            <label className="itemDate">2017-2020</label>
             <label className="itemInformation">
               • Earned recognition for consistency in delivering the highest
               number of completed customer appointments, while registering
