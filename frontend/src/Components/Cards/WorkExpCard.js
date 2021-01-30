@@ -74,7 +74,7 @@ class WorkExpCard extends React.Component {
           </ListGroupItem>
           <ListGroupItem variant="info">
             <label className="itemTitle">Genius</label>
-            <label className="itemDetails">Apple Part-Time</label>
+            <label className="itemDetails">Apple</label>
             <label className="itemDate">2017-2020</label>
             <label className="itemInformation">
               • Earned recognition for consistency in delivering the highest
@@ -96,9 +96,7 @@ class WorkExpCard extends React.Component {
             <label className="itemTitle">
               Billing/Network Admin/Advertising
             </label>
-            <label className="itemDetails">
-              Encino Health & Wellness Part-time
-            </label>
+            <label className="itemDetails">Encino Health & Wellness</label>
             <label className="itemDate">2013-2016</label>
             <label className="itemInformation">
               • Managed marketing and advertisement and produced ads.
