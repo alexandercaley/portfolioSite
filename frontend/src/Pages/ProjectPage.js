@@ -22,7 +22,7 @@ function ProjectPage() {
     return (
       <div>
         {projectData.get(id).description.map((item) => {
-          return <div className="itemDetails">•{item}</div>;
+          return <div className="projectItemDetails">•{item}</div>;
         })}
         <br />
       </div>
@@ -110,10 +110,10 @@ function ProjectPage() {
               <Card.Text>
                 <label className="itemDate">{projectData.get(id).year}</label>
                 <Description />
-                <label className="itemDetails">
+                <label className="projectItemDetails">
                   <Source />
                 </label>
-                <label className="itemDetails">
+                <label className="projectItemDetails">
                   <Download />
                 </label>
               </Card.Text>

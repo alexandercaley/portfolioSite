@@ -39,18 +39,16 @@ class EducationCard extends React.Component {
           style={{ borderRadius: "20px" }}
         >
           <ListGroupItem variant="info">
-            <label className="itemTitle">B.S., Computer Science</label>
-            <label className="itemDetails">
+            <div className="itemTitle">B.S., Computer Science</div>
+            <div className="personItemDetails">
               San Francisco State University
-            </label>
-            <label className="itemDate">2017-2020</label>
+            </div>
+            <div className="itemDate">2017-2020</div>
           </ListGroupItem>
           <ListGroupItem variant="info">
-            <label className="itemTitle">
-              Associates Degree, Computer Science
-            </label>
-            <label className="itemDetails">Pasadena City College</label>
-            <label className="itemDate">2014-2017</label>
+            <div className="itemTitle">Associates Degree, Computer Science</div>
+            <div className="personItemDetails">Pasadena City College</div>
+            <div className="itemDate">2014-2017</div>
           </ListGroupItem>
         </ListGroup>
       </Card>
