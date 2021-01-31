@@ -43,7 +43,7 @@ class WorkExpCard extends React.Component {
             <div className="personItemDetails">
               News iOS Engineer and Screener
             </div>
-            <div className="itemDate">2021-Current</div>
+            <div className="itemDate">Jan 2021-Current</div>
             <div className="itemInformation">• Swift/Objective-C</div>
             <div className="itemInformation">
               • Triage incoming bug reports for News.
@@ -57,7 +57,7 @@ class WorkExpCard extends React.Component {
               deep dive and isolate bugs, propose fixes for team review.
             </div>
             <div className="personItemDetails">Genius</div>
-            <div className="itemDate">2017-2020</div>
+            <div className="itemDate">Oct 2017-Dec 2020</div>
             <div className="itemInformation">
               • Earned recognition for consistency in delivering the highest
               number of completed customer appointments, while registering
@@ -76,7 +76,7 @@ class WorkExpCard extends React.Component {
           </ListGroupItem>
           <ListGroupItem variant="info">
             <div className="itemTitle">Freelance Software Engineer</div>
-            <div className="itemDate">2018-2020</div>
+            <div className="itemDate">Feb 2018-Nov 2020</div>
             <div className="itemInformation">
               • Developed and unit tested web, mobile, and native applications
               in various languages and frameworks including Java, Typescript,
@@ -95,7 +95,7 @@ class WorkExpCard extends React.Component {
             <div className="personItemDetails">
               Billing/Network Admin/Advertising
             </div>
-            <div className="itemDate">2013-2016</div>
+            <div className="itemDate">Jun 2013-Aug 2016</div>
             <div className="itemInformation">
               • Managed marketing and advertisement and produced ads.
             </div>
