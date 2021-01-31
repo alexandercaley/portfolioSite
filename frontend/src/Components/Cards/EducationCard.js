@@ -36,7 +36,7 @@ class EducationCard extends React.Component {
         </Card.Body>
         <ListGroup
           className="list-group-flush"
-          style={{ borderRadius: "20px" }}
+          style={{ borderRadius: "20px", marginTop: "-1rem" }}
         >
           <ListGroupItem variant="info">
             <div className="itemTitle">B.S., Computer Science</div>
