@@ -35,14 +35,21 @@ html {
 .itemTitle {
   text-align: left;
   font-size: 20pt;
-  display: block;
   font-weight: bold;
 }
 
-.itemDetails {
+.projectItemDetails {
   text-align: left;
   font-size: 12pt;
   display: block;
+}
+
+.personItemDetails {
+  text-align: left;
+  font-size: 15pt;
+  display: block;
+  text-decoration: underline;
+  font-weight: bold;
 }
 
 .itemDate {
