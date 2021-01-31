@@ -5,7 +5,6 @@ import {
   ListGroupItem,
   Image,
   Collapse,
-  Button,
 } from "react-bootstrap";
 
 import selfPortrait from "../../assets/selfPortrait.jpeg";
@@ -55,11 +54,29 @@ class PersonCard extends React.Component {
       );
     };
 
-    let ButtonText = () => {
+    let ConditionalButton = () => {
       if (!this.state.showText) {
-        return <div>Show more...</div>;
+        return (
+          <Card.Link
+            variant="info"
+            style={{
+              color: "#00aa9c",
+              fontFamily: "Roboto",
+              marginTop: "-1rem",
+              display: "block",
+              marginLeft: "auto",
+              marginRight: "auto",
+              marginBottom: "1rem",
+              cursor: "pointer",
+            }}
+            onClick={() => this.setState({ showText: !this.state.showText })}
+          >
+            Read more▼
+          </Card.Link>
+        );
+      } else {
+        return null;
       }
-      return <div>Show less...</div>;
     };
 
     return (
@@ -103,19 +120,9 @@ class PersonCard extends React.Component {
                 </span>
               </div>
             </Collapse>
-            <Button
-              variant="info"
-              style={{
-                display: "block",
-                marginLeft: "auto",
-                marginRight: "auto",
-              }}
-              onClick={() => this.setState({ showText: !this.state.showText })}
-            >
-              <ButtonText />
-            </Button>
           </div>
         </Card.Body>
+        <ConditionalButton />
         <ListGroup
           className="list-group-flush"
           style={{ textAlign: "left", borderRadius: "20px" }}
