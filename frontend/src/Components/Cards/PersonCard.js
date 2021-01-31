@@ -105,6 +105,11 @@ class PersonCard extends React.Component {
             </Collapse>
             <Button
               variant="info"
+              style={{
+                display: "block",
+                marginLeft: "auto",
+                marginRight: "auto",
+              }}
               onClick={() => this.setState({ showText: !this.state.showText })}
             >
               <ButtonText />
