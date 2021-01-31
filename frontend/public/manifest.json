@@ -4,9 +4,24 @@
   "description": "Alexander Caley's Professional Career Portfolio",
   "icons": [
     {
-      "src": "favicon_trans.png",
+      "src": "icons/favicon.png",
       "sizes": "512x512",
       "type": "image/png"
+    },
+    {
+      "src": "icons/favicon_trans.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/favicon.ico",
+      "sizes": "256x256",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "icons/favicon_trans.ico",
+      "sizes": "256x256",
+      "type": "image/x-icon"
     }
   ],
   "start_url": "/",
