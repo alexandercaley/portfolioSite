@@ -47,7 +47,7 @@ function Projects() {
           },
         }}
       >
-        <Container fluid={true}>
+        <Container fluid>
           <DrawThumbnails />
         </Container>
       </motion.div>
