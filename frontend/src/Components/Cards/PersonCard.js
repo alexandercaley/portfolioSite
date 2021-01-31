@@ -62,6 +62,7 @@ class PersonCard extends React.Component {
             style={{
               color: "#00aa9c",
               fontFamily: "Roboto",
+              fontSize: "16px",
               marginTop: "-1rem",
               display: "block",
               marginLeft: "auto",
@@ -71,7 +72,8 @@ class PersonCard extends React.Component {
             }}
             onClick={() => this.setState({ showText: !this.state.showText })}
           >
-            Read more▼
+            Read more
+            <div style={{ fontSize: "10px", display: "inline" }}> ▼</div>
           </Card.Link>
         );
       } else {
