@@ -4,24 +4,39 @@
   "description": "Alexander Caley's Professional Career Portfolio",
   "icons": [
     {
-      "src": "icons/favicon.png",
-      "sizes": "512x512",
+      "src": "icons/favicon-32x32.png",
+      "sizes": "32x32",
       "type": "image/png"
     },
     {
-      "src": "icons/favicon_trans.png",
-      "sizes": "512x512",
+      "src": "icons/favicon-16x16.png",
+      "sizes": "16x16",
       "type": "image/png"
     },
     {
       "src": "icons/favicon.ico",
-      "sizes": "256x256",
+      "sizes": "48x48",
       "type": "image/x-icon"
     },
     {
-      "src": "icons/favicon_trans.ico",
-      "sizes": "256x256",
-      "type": "image/x-icon"
+      "src": "icons/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/safari-pinned-tab.svg",
+      "purpose": "maskable any",
+      "sizes": "any"
     }
   ],
   "start_url": "/",
