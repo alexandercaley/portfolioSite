@@ -58,9 +58,8 @@ class PersonCard extends React.Component {
     let ButtonText = () => {
       if (!this.state.showText) {
         return <div>See more...</div>;
-      } else {
-        return <div>See less...</div>;
       }
+      return <div>See less...</div>;
     };
 
     return (
