@@ -27,14 +27,14 @@ function Home() {
           },
         }}
       >
-        <Container fluid={true}>
-          <Row>
-            <Col md={6}>
+        <Container fluid>
+          <Row xs={1} sm={1} md={2}>
+            <Col>
               <div style={{ paddingBottom: "1rem" }}>
                 <PersonCard />
               </div>
             </Col>
-            <Col md={6}>
+            <Col>
               <div style={{ paddingBottom: "1rem" }}>
                 <EducationCard />
               </div>

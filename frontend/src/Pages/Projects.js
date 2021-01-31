@@ -19,7 +19,7 @@ function Projects() {
       );
     }
     return (
-      <Row>
+      <Row xs={1} sm={2} md={2} lg={3} xl={4}>
         {projectsArray.map((item, index) => {
           return <Col key={index}>{item}</Col>;
         })}
