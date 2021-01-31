@@ -1,0 +1,16 @@
+{
+  "short_name": "AC Portfolio",
+  "name": "Alexander Caley Portfolio",
+  "description": "Alexander Caley's Professional Career Portfolio",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "256x256",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#07aa9c",
+  "background_color": "#282c34"
+}
