@@ -3,7 +3,6 @@ services:
   frontend:
     build: frontend/
     container_name: portfolio_frontend
-    image: alexcaley/frontend_website:latest
     image: alexcaley/frontend_website:1.1
     ports:
       - "127.0.0.1:3000:3000"
@@ -11,7 +10,6 @@ services:
   backend:
     build: backend/
     container_name: portfolio_backend
-    image: alexcaley/backend_website:latest
     image: alexcaley/backend_website:1.0.3
     ports:
       - "127.0.0.1:4000:4000"
