@@ -89,7 +89,7 @@ class PersonCard extends React.Component {
           >
             About Me
           </Card.Title>
-          <Card.Text
+          <div
             style={{
               textAlign: "left",
               fontSize: "14pt",
@@ -114,7 +114,7 @@ class PersonCard extends React.Component {
             >
               <ButtonText />
             </Button>
-          </Card.Text>
+          </div>
         </Card.Body>
         <ListGroup
           className="list-group-flush"
