@@ -53,8 +53,8 @@ class WorkExpCard extends React.Component {
               started occurring.
             </div>
             <div className="itemInformation">
-              • Prioritized and assigned issues for fixing and used tools to
-              deep dive and isolate bugs, propose fixes for team review.
+              • Prioritize and assign issues for fixing and used tools to deep
+              dive and isolate bugs, propose fixes for team review.
             </div>
             <div className="personItemDetails">Genius</div>
             <div className="itemDate">Oct 2017-Dec 2020</div>
