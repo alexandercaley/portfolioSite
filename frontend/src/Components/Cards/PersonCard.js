@@ -23,7 +23,7 @@ class PersonCard extends React.Component {
   render() {
     let QuickAbout = () => {
       return (
-        <Card.Text>
+        <Card.Text style={{ marginBottom: "0px" }}>
           Hi there! My name is Alexander. Three years ago I moved from Glendale,
           CA. to San Francisco to attend school. I recently graduated with a
           degree in Computer Science and I'm looking to pursue a career in
