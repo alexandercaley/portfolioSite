@@ -40,9 +40,7 @@ class WorkExpCard extends React.Component {
         >
           <ListGroupItem variant="info">
             <div className="itemTitle">Apple</div>
-            <div className="personItemDetails">
-              News iOS Engineer and Screener
-            </div>
+            <div className="personItemDetails">News Engineer and Screener</div>
             <div className="itemDate">Jan 2021-Current</div>
             <div className="itemInformation">• Swift/Objective-C</div>
             <div className="itemInformation">
@@ -53,8 +51,11 @@ class WorkExpCard extends React.Component {
               started occurring.
             </div>
             <div className="itemInformation">
-              • Prioritize and assign issues for fixing and used tools to deep
-              dive and isolate bugs, propose fixes for team review.
+              • Prioritize and assign issues for fixing
+            </div>
+            <div className="itemInformation">
+              • Used tools to deep dive and isolate bugs and propose fixes for
+              team review.
             </div>
             <div className="personItemDetails">Genius</div>
             <div className="itemDate">Oct 2017-Dec 2020</div>

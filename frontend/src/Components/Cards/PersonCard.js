@@ -23,18 +23,18 @@ class PersonCard extends React.Component {
   render() {
     let QuickAbout = () => {
       return (
-        <div>
+        <Card.Text>
           Hi there! My name is Alexander. Three years ago I moved from Glendale,
           CA. to San Francisco to attend school. I recently graduated with a
           degree in Computer Science and I'm looking to pursue a career in
           software development.
-        </div>
+        </Card.Text>
       );
     };
 
     let FullAbout = () => {
       return (
-        <div>
+        <Card.Text>
           Much of my experience over the past several years has enabled me to
           hone my development skills in creating innovative solutions in both my
           academic and work environments.
@@ -50,7 +50,7 @@ class PersonCard extends React.Component {
           San Francisco, often going to the beach or Golden Gate Park.
           Additionally, I love to travel and explore the world when I have the
           opportunity.
-        </div>
+        </Card.Text>
       );
     };
 
@@ -117,9 +117,7 @@ class PersonCard extends React.Component {
             <QuickAbout />
             <Collapse in={this.state.showText}>
               <div>
-                <span>
-                  <FullAbout />
-                </span>
+                <FullAbout />
               </div>
             </Collapse>
           </div>

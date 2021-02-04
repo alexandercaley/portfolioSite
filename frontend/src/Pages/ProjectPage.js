@@ -21,8 +21,16 @@ function ProjectPage() {
   let Description = () => {
     return (
       <div>
-        {projectData.get(id).description.map((item) => {
-          return <div className="projectItemDetails">•{item}</div>;
+        {projectData.get(id).description.map((item, index) => {
+          return (
+            <Card.Text
+              className="projectItemDetails"
+              key={index}
+              style={{ marginBottom: "0px" }}
+            >
+              •{item}
+            </Card.Text>
+          );
         })}
         <br />
       </div>
@@ -107,16 +115,16 @@ function ProjectPage() {
               >
                 {projectData.get(id).name}
               </Card.Title>
-              <Card.Text>
-                <label className="itemDate">{projectData.get(id).year}</label>
-                <Description />
-                <label className="projectItemDetails">
-                  <Source />
-                </label>
-                <label className="projectItemDetails">
-                  <Download />
-                </label>
+              <Card.Text className="itemDate">
+                {projectData.get(id).year}
               </Card.Text>
+              <Description />
+              <div className="projectItemDetails">
+                <Source />
+              </div>
+              <div className="projectItemDetails">
+                <Download />
+              </div>
             </Card.Body>
           </Card>
         </Container>
