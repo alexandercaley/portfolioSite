@@ -119,12 +119,12 @@ function ProjectPage() {
                 {projectData.get(id).year}
               </Card.Text>
               <Description />
-              <div className="projectItemDetails">
+              <Card.Text className="projectItemDetails">
                 <Source />
-              </div>
-              <div className="projectItemDetails">
+              </Card.Text>
+              <Card.Text className="projectItemDetails">
                 <Download />
-              </div>
+              </Card.Text>
             </Card.Body>
           </Card>
         </Container>

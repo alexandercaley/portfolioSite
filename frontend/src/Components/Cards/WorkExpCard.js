@@ -88,7 +88,7 @@ class WorkExpCard extends React.Component {
             </div>
             <div className="itemInformation">
               • A list of relevant projects along with GitHub repo's and
-              README's can be found in the Projects section of my LinkedIn page
+              README's can be found in the Projects section of my Portfolio
               ranging from personal projects to projects with groups up to 7
               people
             </div>
