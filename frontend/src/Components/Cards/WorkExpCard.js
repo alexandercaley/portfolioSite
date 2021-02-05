@@ -56,7 +56,7 @@ class WorkExpCard extends React.Component {
               • Prioritize and assign issues for fixing
             </div>
             <div className="itemInformation">
-              • Used tools to deep dive and isolate bugs and propose fixes for
+              • Use tools to deep dive and isolate bugs and propose fixes for
               team review.
             </div>
             <div className="personItemDetails">Genius</div>
