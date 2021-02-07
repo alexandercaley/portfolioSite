@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 import { Container, Row, Col } from "reactstrap";
 
-function ContactPage() {
+export default function ContactPage() {
   return (
     <div>
       <h1 className="title">Contact</h1>
@@ -40,5 +40,3 @@ function ContactPage() {
     </div>
   );
 }
-
-export default ContactPage;

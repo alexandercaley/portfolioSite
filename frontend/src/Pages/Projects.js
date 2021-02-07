@@ -5,7 +5,7 @@ import { Container, Row, Col } from "reactstrap";
 
 import projectData from "../Data/projectData";
 
-function Projects() {
+export default function Projects() {
   let DrawThumbnails = () => {
     var projectsArray = [];
     for (const [key, value] of projectData.entries()) {
@@ -59,5 +59,3 @@ function Projects() {
     </div>
   );
 }
-
-export default Projects;

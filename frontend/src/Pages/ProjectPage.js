@@ -12,7 +12,7 @@ import { Card, Image, Button } from "react-bootstrap";
 
 import githubGlyph from "../assets/glyphs/githubGlyph.png";
 
-function ProjectPage() {
+export default function ProjectPage() {
   let { id } = useParams();
   if (!projectData.has(id)) {
     return <PageNotFound />;
@@ -132,5 +132,3 @@ function ProjectPage() {
     </div>
   );
 }
-
-export default ProjectPage;
