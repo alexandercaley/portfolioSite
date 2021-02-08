@@ -7,7 +7,7 @@ import {
   Collapse,
 } from "react-bootstrap";
 
-import { sendEvent } from "../GoogleAnalytics/analytics";
+import analytics from "../GoogleAnalytics/analytics";
 
 import selfPortrait from "../../assets/selfPortrait.jpeg";
 
@@ -69,9 +69,10 @@ export default function PersonCard() {
           }}
           onClick={() => {
             setshowText(!showText);
-            sendEvent({
+            analytics.sendEvent({
               category: "About",
               action: "Read more",
+              value: 1,
             });
           }}
         >

@@ -3,7 +3,7 @@ import React from "react";
 import { Form, Button } from "react-bootstrap";
 import axios from "axios";
 
-import { sendEvent } from "./GoogleAnalytics/analytics";
+import analytics from "./GoogleAnalytics/analytics";
 
 let serverURL = "https://api.alexandercaley.com";
 
@@ -46,18 +46,20 @@ class Contact extends React.Component {
       .post(`${serverURL}/email`, payload)
       .then((res) => {
         if (res.data.success) {
-          sendEvent({
+          analytics.sendEvent({
             category: "Contact",
             action: "Email sent",
+            value: 2,
           });
           this.setState({
             disabled: true,
             emailSent: true,
           });
         } else {
-          sendEvent({
+          analytics.sendEvent({
             category: "Contact",
             action: "Email not sent",
+            value: 3,
           });
 
           this.setState({
@@ -69,9 +71,10 @@ class Contact extends React.Component {
       .catch((err) => {
         console.log(err);
 
-        sendEvent({
+        analytics.sendEvent({
           category: "Contact",
-          action: "Email not sent",
+          action: "Email not sent (ERR)",
+          value: 3,
         });
 
         this.setState({
