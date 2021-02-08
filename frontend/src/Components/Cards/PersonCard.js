@@ -7,6 +7,8 @@ import {
   Collapse,
 } from "react-bootstrap";
 
+import { sendEvent } from "../../GoogleAnalytics/analytics";
+
 import selfPortrait from "../../assets/selfPortrait.jpeg";
 
 import resumeGlyph from "../../assets/glyphs/resumeGlyph.png";
@@ -65,7 +67,13 @@ export default function PersonCard() {
             marginBottom: "1rem",
             cursor: "pointer",
           }}
-          onClick={() => setshowText(!showText)}
+          onClick={() => {
+            setshowText(!showText);
+            sendEvent({
+              category: "About",
+              action: "Read more",
+            });
+          }}
         >
           Read more
           <div style={{ fontSize: "10px", display: "inline" }}> ▼</div>

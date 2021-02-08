@@ -3,6 +3,8 @@ import React from "react";
 import { Form, Button } from "react-bootstrap";
 import axios from "axios";
 
+import { sendEvent } from "../GoogleAnalytics/analytics";
+
 let serverURL = "https://api.alexandercaley.com";
 
 class Contact extends React.Component {
@@ -44,6 +46,10 @@ class Contact extends React.Component {
       .post(`${serverURL}/email`, payload)
       .then((res) => {
         if (res.data.success) {
+          sendEvent({
+            category: "Contact",
+            action: "Email sent",
+          });
           this.setState({
             disabled: true,
             emailSent: true,
