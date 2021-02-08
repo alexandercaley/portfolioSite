@@ -7,7 +7,7 @@ import {
   Collapse,
 } from "react-bootstrap";
 
-import { sendEvent } from "../../GoogleAnalytics/analytics";
+import { sendEvent } from "../GoogleAnalytics/analytics";
 
 import selfPortrait from "../../assets/selfPortrait.jpeg";
 

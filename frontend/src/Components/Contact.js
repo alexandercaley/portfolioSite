@@ -3,7 +3,7 @@ import React from "react";
 import { Form, Button } from "react-bootstrap";
 import axios from "axios";
 
-import { sendEvent } from "../GoogleAnalytics/analytics";
+import { sendEvent } from "./GoogleAnalytics/analytics";
 
 let serverURL = "https://api.alexandercaley.com";
 
@@ -55,6 +55,11 @@ class Contact extends React.Component {
             emailSent: true,
           });
         } else {
+          sendEvent({
+            category: "Contact",
+            action: "Email not sent",
+          });
+
           this.setState({
             disabled: false,
             emailSent: false,
@@ -63,6 +68,11 @@ class Contact extends React.Component {
       })
       .catch((err) => {
         console.log(err);
+
+        sendEvent({
+          category: "Contact",
+          action: "Email not sent",
+        });
 
         this.setState({
           disabled: false,

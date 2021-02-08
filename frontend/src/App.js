@@ -15,7 +15,7 @@ import ContactPage from "./Pages/ContactPage";
 import ProjectPage from "./Pages/ProjectPage";
 import PageNotFound from "./Pages/PageNotFound";
 
-import useGoogleAnalytics from "./GoogleAnalytics/useGoogleAnalytics";
+import useGoogleAnalytics from "./Components/GoogleAnalytics/useGoogleAnalytics";
 
 import "./App.css";
 
