@@ -3,7 +3,7 @@ services:
   frontend:
     build: frontend/
     container_name: portfolio_frontend
-    image: alexcaley/frontend_website:1.1.2
+    image: alexcaley/frontend_website:1.2
     ports:
       - "127.0.0.1:3000:3000"
     restart: always
