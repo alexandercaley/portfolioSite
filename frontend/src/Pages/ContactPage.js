@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Contact from "../Components/Contact";
 import Footer from "../Components/ContactFooter";
 
@@ -7,6 +7,29 @@ import { motion } from "framer-motion";
 import { Container, Row, Col } from "reactstrap";
 
 export default function ContactPage() {
+  const [showFooter, setShowFooter] = useState();
+
+  let handleScreenChange = () => {
+    if (window.innerHeight < 490) {
+      setShowFooter(false);
+    } else {
+      setShowFooter(true);
+    }
+  };
+
+  useEffect(() => {
+    handleScreenChange();
+  }, []);
+
+  window.addEventListener("resize", handleScreenChange);
+
+  let ConditionalFooter = () => {
+    if (showFooter) {
+      return <Footer />;
+    }
+    return null;
+  };
+
   return (
     <div>
       <h1 className="title">Contact</h1>
@@ -36,7 +59,7 @@ export default function ContactPage() {
         </Row>
       </Container>
       <div style={{ paddingBottom: "11rem" }} />
-      <Footer />
+      <ConditionalFooter />
     </div>
   );
 }
