@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Thumbnail from "../Components/Thumbnail";
 import { motion } from "framer-motion";
 import { Container, Row, Col } from "reactstrap";
@@ -6,6 +6,26 @@ import { Container, Row, Col } from "reactstrap";
 import projectData from "../Data/projectData";
 
 export default function Projects() {
+  const [numRows, setNumRows] = useState();
+
+  let handleGridChange = () => {
+    if (window.innerWidth > 2700) {
+      setNumRows(5);
+    } else if (window.innerWidth > 1800) {
+      setNumRows(4);
+    } else if (window.innerWidth > 1000) {
+      setNumRows(3);
+    } else if (window.innerWidth > 700) {
+      setNumRows(2);
+    } else if (window.innerWidth < 600) {
+      setNumRows(1);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleGridChange);
+  }, []);
+
   let DrawThumbnails = () => {
     var projectsArray = [];
     for (const [key, value] of projectData.entries()) {
@@ -18,11 +38,19 @@ export default function Projects() {
         />
       );
     }
+    handleGridChange();
     return (
-      <Row xs={1} sm={2} md={2} lg={3} xl={4}>
+      <Row xs={1} sm={numRows}>
         {projectsArray.map((item, index) => {
           return (
-            <Col key={index}>
+            <Col
+              key={index}
+              style={{
+                paddingBottom: "1rem",
+                marginTop: "auto",
+                marginBottom: "auto",
+              }}
+            >
               <motion.div
                 initial="hidden"
                 animate="visible"
