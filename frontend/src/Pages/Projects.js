@@ -17,7 +17,7 @@ export default function Projects() {
       setNumRows(3);
     } else if (window.innerWidth > 700) {
       setNumRows(2);
-    } else if (window.innerWidth < 600) {
+    } else if (window.innerWidth < 625) {
       setNumRows(1);
     }
   };
