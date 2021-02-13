@@ -10,7 +10,7 @@ export default function ContactPage() {
   const [showFooter, setShowFooter] = useState();
 
   let handleScreenChange = () => {
-    if (window.innerHeight < 555) {
+    if (window.innerHeight < 555 && window.innerWidth < 1740) {
       setShowFooter(false);
     } else {
       setShowFooter(true);
