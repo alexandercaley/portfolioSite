@@ -58,6 +58,7 @@ export default function ContactPage() {
           </Col>
         </Row>
       </Container>
+      <div style={{ paddingBottom: "1rem" }} />
       <ConditionalFooter />
     </div>
   );
