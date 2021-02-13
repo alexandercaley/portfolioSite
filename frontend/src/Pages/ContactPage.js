@@ -10,7 +10,7 @@ export default function ContactPage() {
   const [showFooter, setShowFooter] = useState();
 
   let handleScreenChange = () => {
-    if (window.innerHeight < 490) {
+    if (window.innerHeight < 555) {
       setShowFooter(false);
     } else {
       setShowFooter(true);
@@ -58,7 +58,7 @@ export default function ContactPage() {
           </Col>
         </Row>
       </Container>
-      <div style={{ paddingBottom: "1rem" }} />
+      <div style={{ paddingBottom: "2rem" }} />
       <ConditionalFooter />
     </div>
   );
