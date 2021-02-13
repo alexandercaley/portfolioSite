@@ -29,7 +29,7 @@ export default function Projects() {
   window.addEventListener("resize", handleGridChange);
 
   let DrawThumbnails = () => {
-    var projectsArray = [];
+    let projectsArray = [];
     for (const [key, value] of projectData.entries()) {
       projectsArray.push(
         <Thumbnail
