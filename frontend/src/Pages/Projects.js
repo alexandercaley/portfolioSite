@@ -11,7 +11,7 @@ export default function Projects() {
   let handleGridChange = () => {
     if (window.innerWidth > 2700) {
       setNumRows(5);
-    } else if (window.innerWidth > 1800) {
+    } else if (window.innerWidth > 1700) {
       setNumRows(4);
     } else if (window.innerWidth > 1000) {
       setNumRows(3);
@@ -23,8 +23,10 @@ export default function Projects() {
   };
 
   useEffect(() => {
-    window.addEventListener("resize", handleGridChange);
+    handleGridChange();
   }, []);
+
+  window.addEventListener("resize", handleGridChange);
 
   let DrawThumbnails = () => {
     var projectsArray = [];
@@ -38,7 +40,7 @@ export default function Projects() {
         />
       );
     }
-    handleGridChange();
+
     return (
       <Row xs={1} sm={numRows}>
         {projectsArray.map((item, index) => {
