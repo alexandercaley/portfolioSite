@@ -58,6 +58,7 @@ export default function WorkExpCard() {
             • Use tools to deep dive and isolate bugs and propose fixes for team
             review.
           </div>
+          <div className="itemInformation">• Implement solutions</div>
           <div className="personItemDetails">Genius</div>
           <div className="itemDate">Oct 2017-Dec 2020</div>
           <div className="itemInformation">
