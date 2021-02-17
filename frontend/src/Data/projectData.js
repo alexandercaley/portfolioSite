@@ -6,6 +6,14 @@ import greenworldImage from "../assets/projectImages/greenworldImage.png";
 import surgedateImage from "../assets/projectImages/surgedateImage.png";
 import websiteImage from "../assets/logo/logo_black.png";
 
+import tankThumbnail from "../assets/projectThumbnails/tankThumbnail.png";
+import redditThumbnail from "../assets/projectThumbnails/redditThumbnail.png";
+import shellThumbnail from "../assets/projectThumbnails/shellThumbnail.png";
+import clippersThumbnail from "../assets/projectThumbnails/clippersThumbnail.png";
+import greenworldThumbnail from "../assets/projectThumbnails/greenworldThumbnail.png";
+import surgedateThumbnail from "../assets/projectThumbnails/surgedateThumbnail.png";
+import websiteThumbnail from "../assets/projectThumbnails/logo_blackThumbnail.png";
+
 let projectData = new Map();
 projectData.set("website", {
   name: "Portfolio Website",
@@ -22,6 +30,7 @@ projectData.set("website", {
     "Uses Google analytics",
   ],
   image: websiteImage,
+  thumbnail: websiteThumbnail,
   source: "https://github.com/alexandercaley/portfolioSite",
 });
 projectData.set("surgeDate", {
@@ -41,6 +50,7 @@ projectData.set("surgeDate", {
     "Test driven development",
   ],
   image: surgedateImage,
+  thumbnail: surgedateThumbnail,
 });
 projectData.set("redditLite", {
   name: "Reddit Lite",
@@ -60,6 +70,7 @@ projectData.set("redditLite", {
     "5 Person Project",
   ],
   image: redditImage,
+  thumbnail: redditThumbnail,
   source: "https://github.com/sfsu-csc667-fall19/final-project-redditlite",
 });
 projectData.set("greenWorld", {
@@ -77,6 +88,7 @@ projectData.set("greenWorld", {
     "React Frontend",
   ],
   image: greenworldImage,
+  thumbnail: greenworldThumbnail,
   source: "https://github.com/alexandercaley/greenworld",
 });
 projectData.set("clippersApp", {
@@ -89,6 +101,7 @@ projectData.set("clippersApp", {
     "Firebase for backend and tables",
   ],
   image: clippersImage,
+  thumbnail: clippersThumbnail,
   source: "https://github.com/alexandercaley/clippers_for_ios",
 });
 projectData.set("linuxShell", {
@@ -102,6 +115,7 @@ projectData.set("linuxShell", {
     "Full shell",
   ],
   image: shellImage,
+  thumbnail: shellThumbnail,
   source: "https://github.com/alexandercaley/linuxshell",
 });
 projectData.set("tankGame", {
@@ -117,6 +131,7 @@ projectData.set("tankGame", {
     "Written in Java",
   ],
   image: tankImage,
+  thumbnail: tankThumbnail,
   source: "https://github.com/alexandercaley/tankgame",
   download:
     "https://drive.google.com/file/d/1q45EkVuP6U6B3gBEb5oF5EOn01K99Rvs/view?usp=sharing",

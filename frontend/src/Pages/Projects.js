@@ -34,7 +34,7 @@ export default function Projects() {
       projectsArray.push(
         <Thumbnail
           link={`/project/${key}`}
-          image={value.image}
+          image={value.thumbnail}
           title={value.name}
           category={value.category}
         />
