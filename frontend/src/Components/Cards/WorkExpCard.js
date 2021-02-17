@@ -39,9 +39,7 @@ export default function WorkExpCard() {
       >
         <ListGroupItem variant="info">
           <div className="itemTitle">Apple</div>
-          <div className="personItemDetails">
-            News iOS/macOS Engineer and Screener
-          </div>
+          <div className="personItemDetails">iOS Engineer and Screener</div>
           <div className="itemDate">Jan 2021-Current</div>
           <div className="itemInformation">• Swift/Objective-C</div>
           <div className="itemInformation">
