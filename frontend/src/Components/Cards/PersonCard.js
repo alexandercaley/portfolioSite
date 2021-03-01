@@ -44,7 +44,7 @@ export default function PersonCard() {
     );
   };
 
-  let ReadMore = () => {
+  let ReadMoreButton = () => {
     return !showText ? (
       <Card.Link
         variant="info"
@@ -115,7 +115,7 @@ export default function PersonCard() {
           </Collapse>
         </div>
       </Card.Body>
-      <ReadMore />
+      <ReadMoreButton />
       <ListGroup
         className="list-group-flush"
         style={{ textAlign: "left", borderRadius: "20px" }}
