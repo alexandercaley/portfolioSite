@@ -9,13 +9,6 @@ import {
 
 import analytics from "../GoogleAnalytics/analytics";
 
-import selfPortrait from "../../assets/selfPortrait.jpeg";
-
-import resumeGlyph from "../../assets/glyphs/resumeGlyph.png";
-import mailGlyph from "../../assets/glyphs/mailGlyph.png";
-import githubGlyph from "../../assets/glyphs/githubGlyph.png";
-import linkedInGlyph from "../../assets/glyphs/linkedInGlyph.png";
-
 export default function PersonCard() {
   const [showText, setshowText] = useState(false);
 
@@ -99,7 +92,7 @@ export default function PersonCard() {
       <Card.Img
         style={{ borderRadius: "30px", padding: "1rem" }}
         variant="top"
-        src={selfPortrait}
+        src={"/assets/selfPortrait.jpeg"}
       />
       <Card.Body>
         <Card.Title
@@ -137,7 +130,7 @@ export default function PersonCard() {
             target="_blank"
           >
             <Image
-              src={resumeGlyph}
+              src={"/assets/glyphs/resumeGlyph.png"}
               rounded
               style={{ maxHeight: "20px", paddingRight: "15px" }}
             />
@@ -147,7 +140,7 @@ export default function PersonCard() {
         <ListGroupItem variant="info">
           <Card.Link href="mailto:alexandercaley@gmail.com">
             <Image
-              src={mailGlyph}
+              src={"/assets/glyphs/mailGlyph.png"}
               rounded
               style={{ maxHeight: "20px", paddingRight: "15px" }}
             />
@@ -157,7 +150,7 @@ export default function PersonCard() {
         <ListGroupItem variant="info">
           <Card.Link href="https://github.com/alexandercaley" target="_blank">
             <Image
-              src={githubGlyph}
+              src={"/assets/glyphs/mailGlyph.png"}
               rounded
               style={{ maxHeight: "20px", paddingRight: "15px" }}
             />
@@ -170,7 +163,7 @@ export default function PersonCard() {
             target="_blank"
           >
             <Image
-              src={linkedInGlyph}
+              src={"/assets/glyphs/linkedInGlyph.png"}
               rounded
               style={{ maxHeight: "20px", paddingRight: "15px" }}
             />

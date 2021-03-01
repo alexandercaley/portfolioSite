@@ -2,8 +2,6 @@ import React from "react";
 
 import { Card, ListGroup, ListGroupItem, Image } from "react-bootstrap";
 
-import briefcaseGlyph from "../../assets/glyphs/briefcaseGlyph.png";
-
 export default function WorkExpCard() {
   return (
     <Card
@@ -23,7 +21,7 @@ export default function WorkExpCard() {
           style={{ textAlign: "left", fontWeight: "bold", fontSize: "20pt" }}
         >
           <Image
-            src={briefcaseGlyph}
+            src={"/assets/glyphs/briefcaseGlyph.png"}
             rounded
             style={{
               maxHeight: "45px",

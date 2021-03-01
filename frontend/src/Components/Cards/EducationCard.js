@@ -2,8 +2,6 @@ import React from "react";
 
 import { Card, ListGroup, ListGroupItem, Image } from "react-bootstrap";
 
-import capGlyph from "../../assets/glyphs/capGlyph.png";
-
 export default function EducationCard() {
   return (
     <Card
@@ -23,7 +21,7 @@ export default function EducationCard() {
           style={{ textAlign: "left", fontWeight: "bold", fontSize: "20pt" }}
         >
           <Image
-            src={capGlyph}
+            src={"/assets/glyphs/capGlyph.png"}
             rounded
             style={{
               maxHeight: "40px",

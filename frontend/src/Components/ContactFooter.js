@@ -2,10 +2,6 @@ import React from "react";
 
 import { Card, ListGroup, ListGroupItem, Image } from "react-bootstrap";
 
-import mailGlyph from "../assets/glyphs/mailGlyph.png";
-import githubGlyph from "../assets/glyphs/githubGlyph.png";
-import linkedInGlyph from "../assets/glyphs/linkedInGlyph.png";
-
 export default function Footer() {
   return (
     <div className="contactFooter">
@@ -20,7 +16,7 @@ export default function Footer() {
         <ListGroupItem variant="info">
           <Card.Link href="mailto:alexandercaley@gmail.com">
             <Image
-              src={mailGlyph}
+              src={"/assets/glyphs/mailGlyph.png"}
               rounded
               style={{ maxHeight: "20px", paddingRight: "15px" }}
             />
@@ -30,7 +26,7 @@ export default function Footer() {
         <ListGroupItem variant="info">
           <Card.Link href="https://github.com/alexandercaley" target="_blank">
             <Image
-              src={githubGlyph}
+              src={"/assets/glyphs/githubGlyph.png"}
               rounded
               style={{ maxHeight: "20px", paddingRight: "15px" }}
             />
@@ -43,7 +39,7 @@ export default function Footer() {
             target="_blank"
           >
             <Image
-              src={linkedInGlyph}
+              src={"/assets/glyphs/linkedInGlyph.png"}
               rounded
               style={{ maxHeight: "20px", paddingRight: "15px" }}
             />

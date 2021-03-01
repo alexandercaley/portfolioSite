@@ -10,8 +10,6 @@ import { motion } from "framer-motion";
 import { Container } from "reactstrap";
 import { Card, Image, Button } from "react-bootstrap";
 
-import githubGlyph from "../assets/glyphs/githubGlyph.png";
-
 export default function ProjectPage() {
   let { id } = useParams();
   if (!projectData.hasOwnProperty(id)) {
@@ -44,7 +42,7 @@ export default function ProjectPage() {
     return (
       <Button href={projectData[id].source} target="_blank" variant="info">
         <Image
-          src={githubGlyph}
+          src={"/assets/glyphs/githubGlyph.png"}
           style={{ maxHeight: "30px", paddingRight: "5px" }}
         />
         Source Code
