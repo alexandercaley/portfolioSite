@@ -44,7 +44,7 @@ export default function PersonCard() {
     );
   };
 
-  let ConditionalButton = () => {
+  let ReadMore = () => {
     if (!showText) {
       return (
         <Card.Link
@@ -119,7 +119,7 @@ export default function PersonCard() {
           </Collapse>
         </div>
       </Card.Body>
-      <ConditionalButton />
+      <ReadMore />
       <ListGroup
         className="list-group-flush"
         style={{ textAlign: "left", borderRadius: "20px" }}

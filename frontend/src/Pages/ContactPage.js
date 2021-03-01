@@ -23,13 +23,6 @@ export default function ContactPage() {
 
   window.addEventListener("resize", handleScreenChange);
 
-  let ConditionalFooter = () => {
-    if (showFooter) {
-      return <Footer />;
-    }
-    return null;
-  };
-
   return (
     <div>
       <h1 className="title">Contact</h1>
@@ -59,7 +52,7 @@ export default function ContactPage() {
         </Row>
       </Container>
       <div style={{ paddingBottom: "2rem" }} />
-      <ConditionalFooter />
+      {showFooter ? <Footer /> : null}
     </div>
   );
 }
