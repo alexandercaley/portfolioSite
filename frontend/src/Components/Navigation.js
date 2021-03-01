@@ -1,6 +1,6 @@
 import React from "react";
 import { LinkContainer } from "react-router-bootstrap";
-import { Navbar, Nav } from "react-bootstrap";
+import { Navbar, Nav, Image } from "react-bootstrap";
 
 export default function Navigation() {
   return (
@@ -8,7 +8,11 @@ export default function Navigation() {
       <Nav className="mr-auto">
         <LinkContainer exact to="/">
           <Nav.Link style={{ alignContent: "center" }}>
-            <img src={"/assets/logo/logo_trans.png"} className="logo" alt="" />
+            <Image
+              src={"/assets/logo/logo_trans.png"}
+              className="logo"
+              alt="logo"
+            />
           </Nav.Link>
         </LinkContainer>
         <LinkContainer exact to="/">

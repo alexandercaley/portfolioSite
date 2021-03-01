@@ -89,6 +89,7 @@ export default function PersonCard() {
         style={{ borderRadius: "30px", padding: "1rem" }}
         variant="top"
         src={"/assets/selfPortrait.jpeg"}
+        alt="Self Portrait"
       />
       <Card.Body>
         <Card.Title
