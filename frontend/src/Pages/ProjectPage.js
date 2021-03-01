@@ -91,6 +91,7 @@ export default function ProjectPage() {
               style={{ borderRadius: "30px", padding: "1rem" }}
               variant="top"
               src={projectData[id].image}
+              alt={`${projectData[id].name} Image`}
             />
             <Card.Body>
               <Card.Title
