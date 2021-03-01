@@ -36,10 +36,7 @@ export default function ProjectPage() {
   };
 
   let Source = () => {
-    if (!projectData[id].source) {
-      return null;
-    }
-    return (
+    return !projectData[id].source ? null : (
       <Button href={projectData[id].source} target="_blank" variant="info">
         <Image
           src={"/assets/glyphs/githubGlyph.png"}
@@ -51,10 +48,7 @@ export default function ProjectPage() {
   };
 
   let Download = () => {
-    if (!projectData[id].download) {
-      return null;
-    }
-    return (
+    return !projectData[id].download ? null : (
       <Button href={projectData[id].download} target="_blank" variant="info">
         Download Software
       </Button>
