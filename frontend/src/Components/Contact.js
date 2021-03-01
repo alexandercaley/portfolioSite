@@ -144,7 +144,7 @@ class Contact extends React.Component {
               Send
             </Button>
           </div>
-          {this.state.emailSent && this.state.disabled === false && (
+          {this.state.emailSent && (
             <p className="d-inline msg" id="inlineMessageSuccess">
               Email Sent
             </p>
