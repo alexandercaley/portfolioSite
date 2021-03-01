@@ -11,7 +11,7 @@ export default function Thumbnail(props) {
           <div className="project-thumbnail-reg">
             <Image
               src={props.image}
-              alt="Project Image"
+              alt={`${props.title} Image`}
               className="projectImage"
             />
             <div className="overlay">

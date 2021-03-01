@@ -1,0 +1,122 @@
+{
+  "website": {
+    "name": "Portfolio Website",
+    "category": "Web Application",
+    "year": "2020",
+    "description": [
+      "This Portfolio website, alexandercaley.com",
+      "Built with React.js",
+      "Node server for contact with express",
+      "Uses Twillio sendgrid api",
+      "Used Bootstrap with React for styling",
+      "Running in Docker Containers",
+      "Deployed on a Ubuntu Server",
+      "Uses Google analytics"
+    ],
+    "image": "/assets/logo/logo_black.png",
+    "thumbnail": "/assets/projectThumbnails/logo_blackThumbnail.png",
+    "source": "https://github.com/alexandercaley/portfolioSite"
+  },
+  "surgeDate": {
+    "name": "SurgeDate Server",
+    "category": "Backend Server",
+    "year": "2020 (in progress)",
+    "description": [
+      "Dating application that matches users based on their shared information",
+      "Node Servers for all backend tasks and microservices",
+      "Uses Twillio api",
+      "Typescript",
+      "Redis",
+      "JWT token",
+      "MongoDB",
+      "API Validation",
+      "Mocha testing",
+      "Test driven development"
+    ],
+    "image": "/assets/projectImages/surgedateImage.png",
+    "thumbnail": "/assets/projectThumbnails/surgedateThumbnail.png"
+  },
+  "redditLite": {
+    "name": "Reddit Lite",
+    "year": "2019",
+    "category": "Full Stack Web App",
+    "description": [
+      "Lite version of Reddit for desktop and mobile devices",
+      "Node Backend",
+      "MongoDB for tables",
+      "React Frontend",
+      "Lite version of reddit",
+      "Implemented all features with micro services",
+      "Websocket Server",
+      "Used Redis for caching",
+      "Used Kafka for conveyer",
+      "Hosted from docker container",
+      "5 Person Project"
+    ],
+    "image": "/assets/projectImages/redditImage.png",
+    "thumbnail": "/assets/projectThumbnails/redditThumbnail.png",
+    "source": "https://github.com/sfsu-csc667-fall19/final-project-redditlite"
+  },
+  "greenWorld": {
+    "name": "GreenWorld",
+    "year": "2019",
+    "category": "Full Stack Web App",
+    "description": [
+      "Environmental social media site to create posts and attach them to a location",
+      "Involved with a team of 7 people",
+      "Lead the backend team",
+      "MySQL Database",
+      "Uses Google maps api",
+      "Created API’s for frontend to access data from AWS server",
+      "Node Backend",
+      "React Frontend"
+    ],
+    "image": "/assets/projectImages/greenworldImage.png",
+    "thumbnail": "/assets/projectThumbnails/greenworldThumbnail.png",
+    "source": "https://github.com/alexandercaley/greenworld"
+  },
+  "clippersApp": {
+    "name": "Clippers",
+    "year": "2019",
+    "category": "iOS Swift App",
+    "description": [
+      "Swift application for finding local barbers",
+      "Client side frontend app",
+      "Firebase for backend and tables"
+    ],
+    "image": "/assets/projectImages/clippersImage.png",
+    "thumbnail": "/assets/projectThumbnails/clippersThumbnail.png",
+    "source": "https://github.com/alexandercaley/clippers_for_ios"
+  },
+  "linuxShell": {
+    "name": "Linux Shell",
+    "year": "2019",
+    "category": "C Program",
+    "description": [
+      "Linux shell written in C",
+      "Capable of running all built in programs",
+      "Understands arguments",
+      "Full shell"
+    ],
+    "image": "/assets/projectImages/shellImage.png",
+    "thumbnail": "/assets/projectThumbnails/shellThumbnail.png",
+    "source": "https://github.com/alexandercaley/linuxshell"
+  },
+  "tankGame": {
+    "name": "Tank Game",
+    "year": "2018",
+    "category": "Java Application",
+    "description": [
+      "Split screen 2 player game",
+      "Implemented collision",
+      "Implemented Map Parser",
+      "Power ups for higher power output",
+      "Player to get 0 lives first loses",
+      "Written in Java"
+    ],
+    "image": "/assets/projectImages/tankImage.png",
+    "thumbnail": "/assets/projectThumbnails/tankThumbnail.png",
+    "source": "https://github.com/alexandercaley/tankgame",
+    "download": "https://drive.google.com/file/d/1q45EkVuP6U6B3gBEb5oF5EOn01K99Rvs/view?usp=sharing"
+  }
+}

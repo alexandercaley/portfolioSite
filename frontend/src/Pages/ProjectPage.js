@@ -2,7 +2,7 @@ import React from "react";
 
 import PageNotFound from "./PageNotFound";
 
-import projectData from "../Data/projectData";
+import projectData from "../Data/projectData.json";
 
 import { useParams } from "react-router";
 
@@ -14,14 +14,14 @@ import githubGlyph from "../assets/glyphs/githubGlyph.png";
 
 export default function ProjectPage() {
   let { id } = useParams();
-  if (!projectData.has(id)) {
+  if (!projectData.hasOwnProperty(id)) {
     return <PageNotFound />;
   }
 
   let Description = () => {
     return (
       <div>
-        {projectData.get(id).description.map((item, index) => {
+        {projectData[id].description.map((item, index) => {
           return (
             <Card.Text
               className="projectItemDetails"
@@ -38,11 +38,11 @@ export default function ProjectPage() {
   };
 
   let Source = () => {
-    if (!projectData.get(id).source) {
+    if (!projectData[id].source) {
       return null;
     }
     return (
-      <Button href={projectData.get(id).source} target="_blank" variant="info">
+      <Button href={projectData[id].source} target="_blank" variant="info">
         <Image
           src={githubGlyph}
           style={{ maxHeight: "30px", paddingRight: "5px" }}
@@ -53,15 +53,11 @@ export default function ProjectPage() {
   };
 
   let Download = () => {
-    if (!projectData.get(id).download) {
+    if (!projectData[id].download) {
       return null;
     }
     return (
-      <Button
-        href={projectData.get(id).download}
-        target="_blank"
-        variant="info"
-      >
+      <Button href={projectData[id].download} target="_blank" variant="info">
         Download Software
       </Button>
     );
@@ -102,7 +98,7 @@ export default function ProjectPage() {
             <Card.Img
               style={{ borderRadius: "30px", padding: "1rem" }}
               variant="top"
-              src={projectData.get(id).image}
+              src={projectData[id].image}
             />
             <Card.Body>
               <Card.Title
@@ -113,11 +109,9 @@ export default function ProjectPage() {
                   fontSize: "25pt",
                 }}
               >
-                {projectData.get(id).name}
+                {projectData[id].name}
               </Card.Title>
-              <Card.Text className="itemDate">
-                {projectData.get(id).year}
-              </Card.Text>
+              <Card.Text className="itemDate">{projectData[id].year}</Card.Text>
               <Description />
               <Card.Text className="projectItemDetails">
                 <Source />

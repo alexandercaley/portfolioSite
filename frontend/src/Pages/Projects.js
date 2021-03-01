@@ -3,7 +3,7 @@ import Thumbnail from "../Components/Thumbnail";
 import { motion } from "framer-motion";
 import { Container, Row, Col } from "reactstrap";
 
-import projectData from "../Data/projectData";
+import projectData from "../Data/projectData.json";
 
 export default function Projects() {
   const [numRows, setNumRows] = useState();
@@ -30,17 +30,16 @@ export default function Projects() {
 
   let DrawThumbnails = () => {
     let projectsArray = [];
-    for (const [key, value] of projectData.entries()) {
+    for (let value in projectData) {
       projectsArray.push(
         <Thumbnail
-          link={`/project/${key}`}
-          image={value.thumbnail}
-          title={value.name}
-          category={value.category}
+          link={`/project/${value}`}
+          image={projectData[value].thumbnail}
+          title={projectData[value].name}
+          category={projectData[value].category}
         />
       );
     }
-
     return (
       <Row xs={1} sm={numRows}>
         {projectsArray.map((item, index) => {
@@ -82,7 +81,6 @@ export default function Projects() {
   return (
     <div>
       <h1 className="title">Projects</h1>
-
       <Container fluid>
         <DrawThumbnails />
       </Container>
