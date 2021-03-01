@@ -147,7 +147,7 @@ export default function PersonCard() {
         <ListGroupItem variant="info">
           <Card.Link href="https://github.com/alexandercaley" target="_blank">
             <Image
-              src={"/assets/glyphs/mailGlyph.png"}
+              src={"/assets/glyphs/gitHubGlyph.png"}
               rounded
               style={{ maxHeight: "20px", paddingRight: "15px" }}
             />
