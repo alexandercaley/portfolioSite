@@ -45,37 +45,33 @@ export default function PersonCard() {
   };
 
   let ReadMore = () => {
-    if (!showText) {
-      return (
-        <Card.Link
-          variant="info"
-          style={{
-            color: "#00aa9c",
-            fontFamily: "Roboto",
-            fontSize: "16px",
-            marginTop: "-1rem",
-            display: "block",
-            marginLeft: "auto",
-            marginRight: "auto",
-            marginBottom: "1rem",
-            cursor: "pointer",
-          }}
-          onClick={() => {
-            setshowText(!showText);
-            analytics.sendEvent({
-              category: "About",
-              action: "Read more",
-              value: 1,
-            });
-          }}
-        >
-          Read more
-          <div style={{ fontSize: "10px", display: "inline" }}> ▼</div>
-        </Card.Link>
-      );
-    } else {
-      return null;
-    }
+    return !showText ? (
+      <Card.Link
+        variant="info"
+        style={{
+          color: "#00aa9c",
+          fontFamily: "Roboto",
+          fontSize: "16px",
+          marginTop: "-1rem",
+          display: "block",
+          marginLeft: "auto",
+          marginRight: "auto",
+          marginBottom: "1rem",
+          cursor: "pointer",
+        }}
+        onClick={() => {
+          setshowText(!showText);
+          analytics.sendEvent({
+            category: "About",
+            action: "Read more",
+            value: 1,
+          });
+        }}
+      >
+        Read more
+        <div style={{ fontSize: "10px", display: "inline" }}> ▼</div>
+      </Card.Link>
+    ) : null;
   };
 
   return (
