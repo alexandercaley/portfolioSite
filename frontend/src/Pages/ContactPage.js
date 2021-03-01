@@ -52,7 +52,7 @@ export default function ContactPage() {
         </Row>
       </Container>
       <div style={{ paddingBottom: "2rem" }} />
-      {showFooter ? <Footer /> : null}
+      {showFooter && <Footer />}
     </div>
   );
 }
