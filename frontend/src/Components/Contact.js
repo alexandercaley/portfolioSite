@@ -46,40 +46,37 @@ class Contact extends React.Component {
       .post(`${serverURL}/email`, payload)
       .then((res) => {
         if (res.data.success) {
+          this.setState({
+            disabled: true,
+            emailSent: true,
+          });
           analytics.sendEvent({
             category: "Contact",
             action: "Email sent",
             value: 2,
           });
-          this.setState({
-            disabled: true,
-            emailSent: true,
-          });
         } else {
+          this.setState({
+            disabled: false,
+            emailSent: false,
+          });
           analytics.sendEvent({
             category: "Contact",
             action: "Email not sent",
             value: 3,
           });
-
-          this.setState({
-            disabled: false,
-            emailSent: false,
-          });
         }
       })
       .catch((err) => {
         console.log(err);
-
+        this.setState({
+          disabled: false,
+          emailSent: false,
+        });
         analytics.sendEvent({
           category: "Contact",
           action: "Email not sent (ERR)",
           value: 3,
-        });
-
-        this.setState({
-          disabled: false,
-          emailSent: false,
         });
       });
   };
@@ -150,6 +147,11 @@ class Contact extends React.Component {
           {this.state.emailSent === true && (
             <p className="d-inline msg" id="inlineMessageSuccess">
               Email Sent
+            </p>
+          )}
+          {this.state.disabled === true && !this.state.emailSent && (
+            <p className="d-inline msg" id="inlineMessageSending">
+              Email Sending...
             </p>
           )}
           {this.state.emailSent === false && (

@@ -150,6 +150,9 @@ body {
 #inlineMessageSuccess {
   color: green;
 }
+#inlineMessageSending {
+  color: yellow;
+}
 #inlineMessageFail {
   color: red;
 }
