@@ -36,7 +36,7 @@ export default function WorkExpCard() {
         style={{ borderRadius: "20px", marginTop: "-1rem" }}
       >
         <ListGroupItem variant="info">
-          <div className="itemTitle">Apple</div>
+          <div className="itemTitle">Apple</div>
           <div className="personItemDetails">iOS Engineer and Screener</div>
           <div className="itemDate">Jan 2021-Current</div>
           <div className="itemInformation">• Swift/Objective-C</div>
