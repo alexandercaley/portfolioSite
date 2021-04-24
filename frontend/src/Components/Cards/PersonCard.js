@@ -10,11 +10,11 @@ import {
 import analytics from "../GoogleAnalytics/analytics";
 
 export default function PersonCard(props) {
-  const [showText, setShowText] = useState();
+  const [showText, setShowText] = useState(false);
 
   useEffect(() => {
-    props.numRows > 1 ? setShowText(true) : setShowText(false);
-  }, [props.numRows]);
+    props.numCols > 1 ? setShowText(true) : setShowText(false);
+  }, [props.numCols]);
 
   let QuickAbout = () => {
     return (

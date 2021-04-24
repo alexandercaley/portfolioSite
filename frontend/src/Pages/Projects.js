@@ -6,19 +6,19 @@ import { Container, Row, Col } from "reactstrap";
 import projectData from "../Data/projectData.json";
 
 export default function Projects() {
-  const [numRows, setNumRows] = useState();
+  const [numCols, setNumCols] = useState();
 
   let handleGridChange = () => {
     if (window.innerWidth > 2700) {
-      setNumRows(5);
+      setNumCols(5);
     } else if (window.innerWidth > 1700) {
-      setNumRows(4);
+      setNumCols(4);
     } else if (window.innerWidth > 1000) {
-      setNumRows(3);
+      setNumCols(3);
     } else if (window.innerWidth > 700) {
-      setNumRows(2);
+      setNumCols(2);
     } else if (window.innerWidth < 625) {
-      setNumRows(1);
+      setNumCols(1);
     }
   };
 
@@ -41,7 +41,7 @@ export default function Projects() {
       );
     }
     return (
-      <Row xs={1} sm={numRows}>
+      <Row xs={1} sm={numCols}>
         {projectsArray.map((item, index) => {
           return (
             <Col

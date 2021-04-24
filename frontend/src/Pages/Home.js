@@ -7,13 +7,13 @@ import EducationCard from "../Components/Cards/EducationCard";
 import WorkExpCard from "../Components/Cards/WorkExpCard";
 
 export default function Home() {
-  const [numRows, setNumRows] = useState();
+  const [numCols, setNumCols] = useState();
 
   let handleGridChange = () => {
     if (window.innerWidth > 700) {
-      setNumRows(2);
+      setNumCols(2);
     } else {
-      setNumRows(1);
+      setNumCols(1);
     }
   };
 
@@ -28,7 +28,7 @@ export default function Home() {
       <h1 className="title">Alexander Caley</h1>
 
       <Container fluid>
-        <Row xs={1} sm={numRows}>
+        <Row xs={1} sm={numCols}>
           <Col>
             <motion.div
               initial="hidden"
@@ -48,7 +48,7 @@ export default function Home() {
               }}
             >
               <div style={{ paddingBottom: "1rem" }}>
-                <PersonCard numRows={numRows} />
+                <PersonCard numCols={numCols} />
               </div>
             </motion.div>
           </Col>
