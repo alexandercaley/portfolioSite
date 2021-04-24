@@ -48,7 +48,7 @@ export default function Home() {
               }}
             >
               <div style={{ paddingBottom: "1rem" }}>
-                <PersonCard />
+                <PersonCard numRows={numRows} />
               </div>
             </motion.div>
           </Col>

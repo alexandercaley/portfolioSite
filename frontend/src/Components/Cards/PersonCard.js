@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Card,
   ListGroup,
@@ -9,8 +9,12 @@ import {
 
 import analytics from "../GoogleAnalytics/analytics";
 
-export default function PersonCard() {
-  const [showText, setshowText] = useState(false);
+export default function PersonCard(props) {
+  const [showText, setShowText] = useState();
+
+  useEffect(() => {
+    props.numRows > 1 ? setShowText(true) : setShowText(false);
+  }, [props.numRows]);
 
   let QuickAbout = () => {
     return (
@@ -61,7 +65,7 @@ export default function PersonCard() {
             cursor: "pointer",
           }}
           onClick={() => {
-            setshowText(!showText);
+            setShowText(!showText);
             analytics.sendEvent({
               category: "About",
               action: "Read more",
