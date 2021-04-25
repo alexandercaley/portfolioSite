@@ -1,8 +1,31 @@
 import React from "react";
 
 import { Card, ListGroup, ListGroupItem, Image } from "react-bootstrap";
+import educationData from "../../Data/educationData.json";
 
 export default function EducationCard() {
+  let PresentEducationData = () => {
+    let educationDataArray = [];
+    for (let degree in educationData) {
+      educationDataArray.push(
+        <>
+          <div className="itemTitle">{degree}</div>
+          <div className="personItemDetails">
+            {educationData[degree].institution}
+          </div>
+          <div className="itemDate">{educationData[degree].year}</div>
+        </>
+      );
+    }
+    return educationDataArray.map((item, index) => {
+      return (
+        <ListGroupItem variant="info" key={index}>
+          {item}
+        </ListGroupItem>
+      );
+    });
+  };
+
   return (
     <Card
       className="contextCard"
@@ -35,18 +58,7 @@ export default function EducationCard() {
         className="list-group-flush"
         style={{ borderRadius: "20px", marginTop: "-1rem" }}
       >
-        <ListGroupItem variant="info">
-          <div className="itemTitle">B.S., Computer Science</div>
-          <div className="personItemDetails">
-            San Francisco State University
-          </div>
-          <div className="itemDate">2017-2020</div>
-        </ListGroupItem>
-        <ListGroupItem variant="info">
-          <div className="itemTitle">Associates Degree, Computer Science</div>
-          <div className="personItemDetails">Pasadena City College</div>
-          <div className="itemDate">2014-2017</div>
-        </ListGroupItem>
+        <PresentEducationData />
       </ListGroup>
     </Card>
   );

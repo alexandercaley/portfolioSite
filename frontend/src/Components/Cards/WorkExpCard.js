@@ -19,8 +19,8 @@ export default function WorkExpCard() {
                   <div>
                     {role.description.map((item, index) => {
                       return (
-                        <div key={index}>
-                          <div className="itemInformation">• {item}</div>
+                        <div key={index} className="itemInformation">
+                          • {item}
                         </div>
                       );
                     })}
