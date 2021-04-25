@@ -26,7 +26,7 @@ export default function ProjectPage() {
               key={index}
               style={{ marginBottom: "0px" }}
             >
-              •{item}
+              • {item}
             </Card.Text>
           );
         })}
