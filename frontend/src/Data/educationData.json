@@ -1,10 +1,12 @@
-{
-  "B.S., Computer Science": {
+[
+  {
+    "degree": "B.S., Computer Science",
     "institution": "San Francisco State University",
     "year": "2017 - 2020"
   },
-  "Associates Degree, Computer Science": {
+  {
+    "degree": "Associates Degree, Computer Science",
     "institution": "Pasadena City College",
     "year": "2014 - 2017"
   }
-}
+]

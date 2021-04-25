@@ -6,17 +6,15 @@ import educationData from "../../Data/educationData.json";
 export default function EducationCard() {
   let PresentEducationData = () => {
     let educationDataArray = [];
-    for (let degree in educationData) {
+    educationData.forEach((item) => {
       educationDataArray.push(
         <>
-          <div className="itemTitle">{degree}</div>
-          <div className="personItemDetails">
-            {educationData[degree].institution}
-          </div>
-          <div className="itemDate">{educationData[degree].year}</div>
+          <div className="itemTitle">{item.degree}</div>
+          <div className="personItemDetails">{item.institution}</div>
+          <div className="itemDate">{item.year}</div>
         </>
       );
-    }
+    });
     return educationDataArray.map((item, index) => {
       return (
         <ListGroupItem variant="info" key={index}>

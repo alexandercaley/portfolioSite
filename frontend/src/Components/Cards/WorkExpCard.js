@@ -6,32 +6,30 @@ import workData from "../../Data/workData.json";
 export default function WorkExpCard() {
   let PresentWorkData = () => {
     let workDataArray = [];
-    for (let company in workData) {
+    workData.forEach((experience) => {
       workDataArray.push(
         <>
-          <div className="itemTitle">{company}</div>
-          <div>
-            {workData[company].map((role, index) => {
-              return (
-                <div key={index}>
-                  <div className="personItemDetails">{role.name}</div>
-                  <div className="itemDate">{role.year}</div>
-                  <div>
-                    {role.description.map((item, index) => {
-                      return (
-                        <div key={index} className="itemInformation">
-                          • {item}
-                        </div>
-                      );
-                    })}
-                  </div>
+          <div className="itemTitle">{experience.company}</div>
+          {experience.roles.map((role, index) => {
+            return (
+              <div key={index}>
+                <div className="personItemDetails">{role.name}</div>
+                <div className="itemDate">{role.year}</div>
+                <div>
+                  {role.description.map((item, index) => {
+                    return (
+                      <div key={index} className="itemInformation">
+                        • {item}
+                      </div>
+                    );
+                  })}
                 </div>
-              );
-            })}
-          </div>
+              </div>
+            );
+          })}
         </>
       );
-    }
+    });
     return workDataArray.map((item, index) => {
       return (
         <ListGroupItem variant="info" key={index}>
