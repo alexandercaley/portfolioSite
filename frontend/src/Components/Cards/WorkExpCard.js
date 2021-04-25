@@ -5,10 +5,9 @@ import workData from "../../Data/workData.json";
 
 export default function WorkExpCard() {
   let PresentWorkData = () => {
-    let workDataArray = [];
-    workData.forEach((experience) => {
-      workDataArray.push(
-        <>
+    return workData.map((experience, index) => {
+      return (
+        <ListGroupItem variant="info" key={index}>
           <div className="itemTitle">{experience.company}</div>
           {experience.roles.map((role, index) => {
             return (
@@ -27,13 +26,6 @@ export default function WorkExpCard() {
               </div>
             );
           })}
-        </>
-      );
-    });
-    return workDataArray.map((item, index) => {
-      return (
-        <ListGroupItem variant="info" key={index}>
-          {item}
         </ListGroupItem>
       );
     });
