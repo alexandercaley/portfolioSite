@@ -5,10 +5,10 @@ import { Image } from "react-bootstrap";
 
 export default function Thumbnail(props) {
   return (
-    <div className="project-thumbnail-reg">
+    <div className="project-thumbnail">
       <Link to={props.link}>
         <motion.div whileHover={{ scale: 1.03 }}>
-          <div className="project-thumbnail-reg">
+          <div className="project-thumbnail">
             <Image
               src={props.image}
               alt={`${props.title} Image`}

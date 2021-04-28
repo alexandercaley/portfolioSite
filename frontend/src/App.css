@@ -82,25 +82,14 @@ body {
   border-radius: 20px;
 }
 
-.project-thumbnail-reg {
+.project-thumbnail {
   position: relative;
   height: auto;
-  min-width: 280px;
+  min-width: 200px;
   max-width: 800px;
 }
 
-.project-thumbnail-sm {
-  position: relative;
-  height: auto;
-  min-width: 300px;
-  max-width: 800px;
-}
-
-.project-thumbnail-reg:hover .overlay {
-  opacity: 0.8;
-}
-
-.project-thumbnail-sm:hover .overlay {
+.project-thumbnail:hover .overlay {
   opacity: 0.8;
 }
 

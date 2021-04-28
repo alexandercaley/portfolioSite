@@ -15,10 +15,8 @@ export default function Projects() {
       setNumCols(4);
     } else if (window.innerWidth > 1000) {
       setNumCols(3);
-    } else if (window.innerWidth > 700) {
+    } else if (window.innerWidth < 700) {
       setNumCols(2);
-    } else if (window.innerWidth < 625) {
-      setNumCols(1);
     }
   };
 
@@ -41,7 +39,7 @@ export default function Projects() {
       );
     }
     return (
-      <Row xs={1} sm={numCols}>
+      <Row xs={2} sm={numCols}>
         {projectsArray.map((item, index) => {
           return (
             <Col
