@@ -104,16 +104,19 @@ export default function PersonCard(props) {
               showText && props.numCols === 1 ? "col-person-transition" : ""
             }
           >
-            <Card.Img
+            <div
               style={{
-                borderRadius: "30px",
                 padding: "1rem",
                 paddingRight: showText ? "1rem" : "0rem",
               }}
-              variant="top"
-              src={"/assets/selfPortrait.jpeg"}
-              alt="Self Portrait"
-            />
+            >
+              <Card.Img
+                style={{ borderRadius: "20px" }}
+                variant="top"
+                src={"/assets/selfPortrait.jpeg"}
+                alt="Self Portrait"
+              />
+            </div>
           </Col>
           <Col
             className={
