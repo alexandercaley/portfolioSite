@@ -33,6 +33,11 @@ html {
   height: auto;
 }
 
+.col-person-transition {
+  flex-grow: 1;
+  transition: all 150ms ease-out;
+}
+
 .itemTitle {
   text-align: left;
   font-size: 20pt;

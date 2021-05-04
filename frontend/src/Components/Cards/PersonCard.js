@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Row, Col } from "reactstrap";
+import { Container, Row, Col } from "reactstrap";
 import {
   Card,
   ListGroup,
@@ -97,48 +97,58 @@ export default function PersonCard(props) {
       bg="dark"
       text="white"
     >
-      <Row xs={numCols} md={numCols}>
-        <Col>
-          <Card.Img
-            style={{
-              borderRadius: "30px",
-              padding: "1rem",
-              paddingRight: showText ? "1rem" : "0rem",
-            }}
-            variant="top"
-            src={"/assets/selfPortrait.jpeg"}
-            alt="Self Portrait"
-          />
-        </Col>
-        <Col>
-          <Card.Body>
-            <Card.Title
-              className="cardTitle"
+      <Container fluid={true} style={{ padding: "0rem" }}>
+        <Row xs={numCols} md={numCols}>
+          <Col
+            className={
+              showText && props.numCols === 1 ? "col-person-transition" : ""
+            }
+          >
+            <Card.Img
               style={{
-                textAlign: "left",
-                fontWeight: "bold",
-                fontSize: String(dynamicFontScaler * 20 + "pt"),
+                borderRadius: "30px",
+                padding: "1rem",
+                paddingRight: showText ? "1rem" : "0rem",
               }}
-            >
-              About
-            </Card.Title>
-            <div
-              style={{
-                textAlign: "left",
-                fontSize: String(dynamicFontScaler * 14 + "pt"),
-              }}
-            >
-              <QuickAbout />
-              <Collapse in={showText}>
-                <div>
-                  <FullAbout />
-                </div>
-              </Collapse>
-            </div>
-          </Card.Body>
-        </Col>
-      </Row>
-      <ReadMoreButton />
+              variant="top"
+              src={"/assets/selfPortrait.jpeg"}
+              alt="Self Portrait"
+            />
+          </Col>
+          <Col
+            className={
+              showText && props.numCols === 1 ? "col-person-transition" : ""
+            }
+          >
+            <Card.Body>
+              <Card.Title
+                className="cardTitle"
+                style={{
+                  textAlign: "left",
+                  fontWeight: "bold",
+                  fontSize: String(dynamicFontScaler * 20 + "pt"),
+                }}
+              >
+                About
+              </Card.Title>
+              <div
+                style={{
+                  textAlign: "left",
+                  fontSize: String(dynamicFontScaler * 14 + "pt"),
+                }}
+              >
+                <QuickAbout />
+                <Collapse in={showText}>
+                  <div>
+                    <FullAbout />
+                  </div>
+                </Collapse>
+              </div>
+            </Card.Body>
+          </Col>
+        </Row>
+        <ReadMoreButton />
+      </Container>
       <ListGroup
         className="list-group-flush"
         style={{ textAlign: "left", borderRadius: "20px" }}
