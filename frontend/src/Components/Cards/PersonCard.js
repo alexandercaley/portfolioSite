@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Row, Col } from "reactstrap";
 import {
   Card,
   ListGroup,
@@ -10,19 +11,24 @@ import {
 import analytics from "../GoogleAnalytics/analytics";
 
 export default function PersonCard(props) {
-  const [showText, setShowText] = useState(false);
+  const [showText, setShowText] = useState();
+  const [numCols, setNumCols] = useState();
+  const [dynamicFontScaler, setDynamicFontScaler] = useState();
 
   useEffect(() => {
     props.numCols > 1 ? setShowText(true) : setShowText(false);
   }, [props.numCols]);
 
+  useEffect(() => {
+    showText ? setNumCols(1) : setNumCols(2);
+    showText ? setDynamicFontScaler(1) : setDynamicFontScaler(0.7);
+  }, [showText]);
+
   let QuickAbout = () => {
     return (
       <Card.Text style={{ marginBottom: "0px" }}>
         Hi there! My name is Alexander. Three years ago I moved from Glendale,
-        CA. to San Francisco to attend school. I recently graduated with a
-        degree in Computer Science and I'm looking to pursue a career in
-        software development.
+        CA. to San Francisco.
       </Card.Text>
     );
   };
@@ -30,9 +36,10 @@ export default function PersonCard(props) {
   let FullAbout = () => {
     return (
       <Card.Text>
-        Much of my experience over the past several years has enabled me to hone
-        my development skills in creating innovative solutions in both my
-        academic and work environments.
+        I recently graduated with a degree in Computer Science and I'm looking
+        to pursue a career in software development. Much of my experience over
+        the past several years has enabled me to hone my development skills in
+        creating innovative solutions in both my academic and work environments.
         <br />
         As a result of working at Apple, I have gained various skills including
         making the best of every customer interaction and always maintaining a
@@ -57,7 +64,6 @@ export default function PersonCard(props) {
             color: "#00aa9c",
             fontFamily: "Roboto",
             fontSize: "16px",
-            marginTop: "-1rem",
             display: "block",
             marginLeft: "auto",
             marginRight: "auto",
@@ -91,37 +97,46 @@ export default function PersonCard(props) {
       bg="dark"
       text="white"
     >
-      <Card.Img
-        style={{ borderRadius: "30px", padding: "1rem" }}
-        variant="top"
-        src={"/assets/selfPortrait.jpeg"}
-        alt="Self Portrait"
-      />
-      <Card.Body>
-        <Card.Title
-          className="cardTitle"
-          style={{
-            textAlign: "left",
-            fontWeight: "bold",
-            fontSize: "20pt",
-          }}
-        >
-          About Me
-        </Card.Title>
-        <div
-          style={{
-            textAlign: "left",
-            fontSize: "14pt",
-          }}
-        >
-          <QuickAbout />
-          <Collapse in={showText}>
-            <div>
-              <FullAbout />
+      <Row xs={numCols} md={numCols}>
+        <Col>
+          <Card.Img
+            style={{
+              borderRadius: "30px",
+              padding: "1rem",
+            }}
+            variant="top"
+            src={"/assets/selfPortrait.jpeg"}
+            alt="Self Portrait"
+          />
+        </Col>
+        <Col>
+          <Card.Body>
+            <Card.Title
+              className="cardTitle"
+              style={{
+                textAlign: "left",
+                fontWeight: "bold",
+                fontSize: String(dynamicFontScaler * 20 + "pt"),
+              }}
+            >
+              About
+            </Card.Title>
+            <div
+              style={{
+                textAlign: "left",
+                fontSize: String(dynamicFontScaler * 14 + "pt"),
+              }}
+            >
+              <QuickAbout />
+              <Collapse in={showText}>
+                <div>
+                  <FullAbout />
+                </div>
+              </Collapse>
             </div>
-          </Collapse>
-        </div>
-      </Card.Body>
+          </Card.Body>
+        </Col>
+      </Row>
       <ReadMoreButton />
       <ListGroup
         className="list-group-flush"
