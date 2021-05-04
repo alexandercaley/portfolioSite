@@ -27,8 +27,8 @@ export default function PersonCard(props) {
   let QuickAbout = () => {
     return (
       <Card.Text style={{ marginBottom: "0px" }}>
-        Hi there! My name is Alexander. Three years ago I moved from Glendale,
-        CA. to San Francisco.
+        Hi there! My name is Alexander. In 2017 I moved from Glendale, CA to San
+        Francisco.
       </Card.Text>
     );
   };
@@ -103,6 +103,7 @@ export default function PersonCard(props) {
             style={{
               borderRadius: "30px",
               padding: "1rem",
+              paddingRight: showText ? "1rem" : "0rem",
             }}
             variant="top"
             src={"/assets/selfPortrait.jpeg"}
