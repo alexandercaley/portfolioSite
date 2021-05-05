@@ -1,4 +1,4 @@
-import React, { useState, useEffect, createRef, useRef } from "react";
+import React, { useState, useEffect, createRef } from "react";
 import { Container, Row, Col } from "reactstrap";
 import {
   Card,
@@ -17,19 +17,14 @@ export default function PersonCard(props) {
 
   useEffect(() => {
     props.numCols > 1 ? setShowText(true) : setShowText(false);
-    setQuickAboutCount(83);
   }, [props.numCols]);
 
-  let letters = useRef(quickAboutCount);
   useEffect(() => {
-    if (!showText) {
-      if (imageElement.current.offsetHeight > 0) {
-        letters.current =
-          (imageElement.current.offsetHeight *
-            imageElement.current.offsetWidth) /
-          190;
-      }
-      setQuickAboutCount(letters.current);
+    if (!showText && imageElement.current.offsetHeight > 0) {
+      setQuickAboutCount(
+        (imageElement.current.offsetHeight * imageElement.current.offsetWidth) /
+          190
+      );
     }
   }, [imageElement, showText]);
 
@@ -39,14 +34,7 @@ export default function PersonCard(props) {
     return (
       <>
         {about.substring(0, quickAboutCount)}
-        {!showText ? (
-          <>...</>
-        ) : about.charAt(quickAboutCount - 1) === " " ||
-          about.charAt(quickAboutCount) === " " ? (
-          <></>
-        ) : (
-          <>-</>
-        )}
+        {!showText ? <>...</> : <></>}
       </>
     );
   };
@@ -147,24 +135,22 @@ export default function PersonCard(props) {
               >
                 About
               </Card.Title>
-              <div
+              <Card.Text
                 style={{
                   textAlign: "left",
                   fontSize: showText ? "14pt" : "10pt",
                 }}
               >
-                <Card.Text>
-                  <QuickAbout />
-                  <Collapse
-                    in={showText}
-                    style={showText ? { display: "inline" } : {}}
-                  >
-                    <div>
-                      <FullAbout />
-                    </div>
-                  </Collapse>
-                </Card.Text>
-              </div>
+                <QuickAbout />
+                <Collapse
+                  in={showText}
+                  style={showText ? { display: "inline" } : {}}
+                >
+                  <div>
+                    <FullAbout />
+                  </div>
+                </Collapse>
+              </Card.Text>
             </Card.Body>
           </Col>
         </Row>
