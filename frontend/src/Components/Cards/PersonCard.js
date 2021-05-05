@@ -33,7 +33,15 @@ export default function PersonCard(props) {
   let QuickAbout = () => {
     return (
       <>
-        {about.substring(0, quickAboutCount)}
+        {about
+          .substring(0, quickAboutCount)
+          .split("\n")
+          .map((str) => (
+            <>
+              {str}
+              <br />
+            </>
+          ))}
         {!showText ? <>...</> : <></>}
       </>
     );
