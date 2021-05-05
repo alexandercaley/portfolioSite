@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, createRef, useRef } from "react";
 import { Container, Row, Col } from "reactstrap";
 import {
   Card,
@@ -12,46 +12,59 @@ import analytics from "../GoogleAnalytics/analytics";
 
 export default function PersonCard(props) {
   const [showText, setShowText] = useState();
-  const [numCols, setNumCols] = useState();
-  const [dynamicFontScaler, setDynamicFontScaler] = useState();
+  const [quickAboutCount, setQuickAboutCount] = useState(83);
+  let imageElement = createRef();
 
   useEffect(() => {
     props.numCols > 1 ? setShowText(true) : setShowText(false);
+    setQuickAboutCount(83);
   }, [props.numCols]);
 
+  let letters = useRef(quickAboutCount);
   useEffect(() => {
-    showText ? setNumCols(1) : setNumCols(2);
-    showText ? setDynamicFontScaler(1) : setDynamicFontScaler(0.7);
-  }, [showText]);
+    if (imageElement.current.offsetHeight > 0) {
+      letters.current =
+        (imageElement.current.offsetHeight * imageElement.current.offsetWidth) /
+        190;
+    }
+    setQuickAboutCount(letters.current);
+  }, [imageElement]);
+
+  let about = `Hi there! My name is Alexander. In 2017 I moved from Glendale, CA to San Francisco. I recently graduated with a degree in Computer Science and I'm looking to pursue a career in software development. Much of my experience over the past several years has enabled me to hone my development skills in creating innovative solutions in both my academic and work environments.\n As a result of working at Apple, I have gained various skills including making the best of every customer interaction and always maintaining a solution based outlook on things. My academic experience has paved the way for me to strengthen my problem solving and communication skills and also to meet knowledgeable people, several of whom I work with in software development.\n Aside from work, I spend a lot of my free time 'onewheeling' through San Francisco, often going to the beach or Golden Gate Park. Additionally, I love to travel and explore the world when I have the opportunity.`;
 
   let QuickAbout = () => {
     return (
-      <Card.Text style={{ marginBottom: "0px" }}>
-        Hi there! My name is Alexander. In 2017 I moved from Glendale, CA to San
-        Francisco.
-      </Card.Text>
+      <>
+        {about.substring(0, letters.current)}
+        {!showText ? (
+          <>...</>
+        ) : (
+          <>
+            {about[quickAboutCount] === " " ||
+            about[quickAboutCount + 1] === " " ? (
+              <></>
+            ) : (
+              <>-</>
+            )}
+          </>
+        )}
+      </>
     );
   };
 
   let FullAbout = () => {
     return (
-      <Card.Text>
-        I recently graduated with a degree in Computer Science and I'm looking
-        to pursue a career in software development. Much of my experience over
-        the past several years has enabled me to hone my development skills in
-        creating innovative solutions in both my academic and work environments.
-        <br />
-        As a result of working at Apple, I have gained various skills including
-        making the best of every customer interaction and always maintaining a
-        solution based outlook on things. My academic experience has paved the
-        way for me to strengthen my problem solving and communication skills and
-        also to meet knowledgeable people, several of whom I work with in
-        software development.
-        <br />
-        Aside from work, I spend a lot of my free time 'onewheeling' through San
-        Francisco, often going to the beach or Golden Gate Park. Additionally, I
-        love to travel and explore the world when I have the opportunity.
-      </Card.Text>
+      <>
+        {about
+          .substring(letters.current, about.length)
+          .split("\n")
+          .map((str) => (
+            <div>
+              {str}
+              <br />
+            </div>
+          ))}
+      </>
     );
   };
 
@@ -98,7 +111,7 @@ export default function PersonCard(props) {
       text="white"
     >
       <Container fluid={true} style={{ padding: "0rem" }}>
-        <Row xs={numCols} md={numCols}>
+        <Row xs={showText ? 1 : 2} md={showText ? 1 : 2}>
           <Col
             className={
               showText && props.numCols === 1 ? "col-person-transition" : ""
@@ -115,6 +128,7 @@ export default function PersonCard(props) {
                 variant="top"
                 src={"/assets/selfPortrait.jpeg"}
                 alt="Self Portrait"
+                ref={imageElement}
               />
             </div>
           </Col>
@@ -129,7 +143,7 @@ export default function PersonCard(props) {
                 style={{
                   textAlign: "left",
                   fontWeight: "bold",
-                  fontSize: String(dynamicFontScaler * 20 + "pt"),
+                  fontSize: showText ? "20pt" : "14pt",
                 }}
               >
                 About
@@ -137,15 +151,17 @@ export default function PersonCard(props) {
               <div
                 style={{
                   textAlign: "left",
-                  fontSize: String(dynamicFontScaler * 14 + "pt"),
+                  fontSize: showText ? "14pt" : "10pt",
                 }}
               >
-                <QuickAbout />
-                <Collapse in={showText}>
-                  <div>
-                    <FullAbout />
-                  </div>
-                </Collapse>
+                <Card.Text>
+                  <QuickAbout />
+                  <Collapse in={showText}>
+                    <div>
+                      <FullAbout />
+                    </div>
+                  </Collapse>
+                </Card.Text>
               </div>
             </Card.Body>
           </Col>
