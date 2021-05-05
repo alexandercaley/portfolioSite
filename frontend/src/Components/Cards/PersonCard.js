@@ -22,31 +22,30 @@ export default function PersonCard(props) {
 
   let letters = useRef(quickAboutCount);
   useEffect(() => {
-    if (imageElement.current.offsetHeight > 0) {
-      letters.current =
-        (imageElement.current.offsetHeight * imageElement.current.offsetWidth) /
-        190;
+    if (!showText) {
+      if (imageElement.current.offsetHeight > 0) {
+        letters.current =
+          (imageElement.current.offsetHeight *
+            imageElement.current.offsetWidth) /
+          190;
+      }
+      setQuickAboutCount(letters.current);
     }
-    setQuickAboutCount(letters.current);
-  }, [imageElement]);
+  }, [imageElement, showText]);
 
   let about = `Hi there! My name is Alexander. In 2017 I moved from Glendale, CA to San Francisco. I recently graduated with a degree in Computer Science and I'm looking to pursue a career in software development. Much of my experience over the past several years has enabled me to hone my development skills in creating innovative solutions in both my academic and work environments.\n As a result of working at Apple, I have gained various skills including making the best of every customer interaction and always maintaining a solution based outlook on things. My academic experience has paved the way for me to strengthen my problem solving and communication skills and also to meet knowledgeable people, several of whom I work with in software development.\n Aside from work, I spend a lot of my free time 'onewheeling' through San Francisco, often going to the beach or Golden Gate Park. Additionally, I love to travel and explore the world when I have the opportunity.`;
 
   let QuickAbout = () => {
     return (
       <>
-        {about.substring(0, letters.current)}
+        {about.substring(0, quickAboutCount)}
         {!showText ? (
           <>...</>
+        ) : about.charAt(quickAboutCount - 1) === " " ||
+          about.charAt(quickAboutCount) === " " ? (
+          <></>
         ) : (
-          <>
-            {about[quickAboutCount] === " " ||
-            about[quickAboutCount + 1] === " " ? (
-              <></>
-            ) : (
-              <>-</>
-            )}
-          </>
+          <>-</>
         )}
       </>
     );
@@ -56,13 +55,13 @@ export default function PersonCard(props) {
     return (
       <>
         {about
-          .substring(letters.current, about.length)
+          .substring(quickAboutCount, about.length)
           .split("\n")
           .map((str) => (
-            <div>
+            <>
               {str}
               <br />
-            </div>
+            </>
           ))}
       </>
     );
@@ -156,7 +155,10 @@ export default function PersonCard(props) {
               >
                 <Card.Text>
                   <QuickAbout />
-                  <Collapse in={showText}>
+                  <Collapse
+                    in={showText}
+                    style={showText ? { display: "inline" } : {}}
+                  >
                     <div>
                       <FullAbout />
                     </div>
