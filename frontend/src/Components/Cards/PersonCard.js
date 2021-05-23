@@ -12,12 +12,25 @@ import analytics from "../GoogleAnalytics/analytics";
 
 export default function PersonCard(props) {
   const [showText, setShowText] = useState();
+  // This is janky but makes the animation better as we can
+  // wait before expanding text
+  const [expandText, setExpandText] = useState();
   const [quickAboutCount, setQuickAboutCount] = useState(83);
   let imageElement = createRef();
 
   useEffect(() => {
+    setExpandText(showText);
+  }, []);
+
+  useEffect(() => {
     props.numCols > 1 ? setShowText(true) : setShowText(false);
   }, [props.numCols]);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setExpandText(showText);
+    }, 50);
+  }, [showText]);
 
   useEffect(() => {
     if (!showText && imageElement.current.offsetHeight > 0) {
@@ -150,8 +163,8 @@ export default function PersonCard(props) {
               >
                 <QuickAbout />
                 <Collapse
-                  in={showText}
-                  style={showText ? { display: "inline" } : {}}
+                  in={expandText}
+                  style={expandText ? { display: "inline" } : {}}
                 >
                   <div>
                     <FullAbout />
