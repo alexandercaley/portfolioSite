@@ -5,13 +5,7 @@
       {
         "name": "iOS Engineer",
         "year": "Jan 2021 - Current",
-        "description": [
-          "Swift/Objective-C",
-          "Triage incoming bug reports.",
-          "Work closely with QA to reproduce issues and identify when they started occurring.",
-          "Use tools to deep dive and isolate bugs and propose fixes for team review.",
-          "Implement solutions"
-        ]
+        "description": ["Swift/Objective-C", "News/Stocks/Weather"]
       },
       {
         "name": "Genius",

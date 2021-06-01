@@ -20,7 +20,7 @@
   "surgeDate": {
     "name": "SurgeDate Server",
     "category": "Backend Server",
-    "year": "2020 (in progress)",
+    "year": "2020",
     "description": [
       "Dating application that matches users based on their shared information",
       "Node Servers for all backend tasks and microservices",

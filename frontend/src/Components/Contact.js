@@ -151,7 +151,7 @@ class Contact extends React.Component {
           )}
           {this.state.disabled === true && !this.state.emailSent && (
             <p className="d-inline msg" id="inlineMessageSending">
-              Email Sending...
+              Email Sending…
             </p>
           )}
           {this.state.emailSent === false && this.state.disabled === false && (

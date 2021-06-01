@@ -30,17 +30,25 @@ export default function ProjectPage() {
             </Card.Text>
           );
         })}
-        <br />
       </div>
     );
   };
 
   let Source = () => {
     return !projectData[id].source ? null : (
-      <Button href={projectData[id].source} target="_blank" variant="info">
+      <Button
+        href={projectData[id].source}
+        target="_blank"
+        variant="info"
+        style={{ width: "11rem" }}
+      >
         <Image
           src={"/assets/glyphs/githubGlyph.png"}
-          style={{ maxHeight: "30px", paddingRight: "5px" }}
+          style={{
+            maxHeight: "30px",
+            paddingRight: "5px",
+            marginLeft: "-.5rem",
+          }}
         />
         Source Code
       </Button>
@@ -49,7 +57,12 @@ export default function ProjectPage() {
 
   let Download = () => {
     return !projectData[id].download ? null : (
-      <Button href={projectData[id].download} target="_blank" variant="info">
+      <Button
+        href={projectData[id].download}
+        target="_blank"
+        variant="info"
+        style={{ width: "11rem" }}
+      >
         Download Software
       </Button>
     );
@@ -106,6 +119,7 @@ export default function ProjectPage() {
               </Card.Title>
               <Card.Text className="itemDate">{projectData[id].year}</Card.Text>
               <Description />
+              <Card.Text />
               <Card.Text className="projectItemDetails">
                 <Source />
               </Card.Text>
