@@ -50,7 +50,13 @@ export default function ProjectPage() {
             marginLeft: "-.5rem",
           }}
         />
-        Source Code
+        <label
+          style={{
+            transform: "translatey(15%)",
+          }}
+        >
+          Source Code
+        </label>
       </Button>
     );
   };
