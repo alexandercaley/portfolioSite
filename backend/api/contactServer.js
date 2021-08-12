@@ -13,7 +13,7 @@ let originAuth = (req, res, next) => {
   if (req.headers.origin == "https://www.alexandercaley.com") {
     return next();
   } else {
-    res.status(200).json({
+    res.status(401).json({
       success: false,
     });
   }
