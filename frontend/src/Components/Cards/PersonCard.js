@@ -36,13 +36,13 @@ export default function PersonCard(props) {
       <>
         {quickAboutArray.map((str, index) => {
           return (
-            <>
+            <div key={index} style={{ display: "inline" }}>
               {str}
-              {index + 1 < quickAboutArray.length ? <br /> : null}
-            </>
+              {index + 1 < quickAboutArray.length && <br />}
+            </div>
           );
         })}
-        {!showText ? <>…</> : null}
+        {!showText && <>…</>}
       </>
     );
   };
@@ -53,11 +53,11 @@ export default function PersonCard(props) {
         {about
           .substring(quickAboutCount, about.length)
           .split("\n")
-          .map((str) => (
-            <>
+          .map((str, index) => (
+            <div key={index} style={{ display: "inline" }}>
               {str}
               <br />
-            </>
+            </div>
           ))}
       </>
     );
