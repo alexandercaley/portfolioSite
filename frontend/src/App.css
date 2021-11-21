@@ -94,33 +94,15 @@ body {
   max-width: 800px;
 }
 
-.project-thumbnail:hover .overlay {
-  opacity: 0.8;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: auto;
-  width: auto;
-  opacity: 0;
-  transition: 0.5s ease;
-  background-color: rgb(31, 28, 28);
-  border-radius: 20px;
+.project-thumbnail:hover .projectImage {
+  opacity: 0.5;
 }
 
 .itemText {
   color: whitesmoke;
-  font-size: 20px;
-  position: absolute;
+  font-size: 1rem;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
   text-align: center;
 }
 

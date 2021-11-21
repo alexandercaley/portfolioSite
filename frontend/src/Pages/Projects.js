@@ -12,13 +12,13 @@ export default function Projects() {
     if (window.innerWidth > 2700) {
       setNumCols(5);
     } else if (window.innerWidth > 1700) {
+      setNumCols(5);
+    } else if (window.innerWidth > 1300) {
       setNumCols(4);
-    } else if (window.innerWidth > 1000) {
+    } else if (window.innerWidth > 600) {
       setNumCols(3);
-    } else if (window.innerWidth > 500) {
+    } else if (window.innerWidth < 600) {
       setNumCols(2);
-    } else if (window.innerWidth < 500) {
-      setNumCols(1);
     }
   };
 

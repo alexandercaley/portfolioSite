@@ -14,13 +14,13 @@ export default function Thumbnail(props) {
               alt={`${props.title} Image`}
               className="projectImage"
             />
-            <div className="overlay">
-              <div id="project-title" className="itemText">
-                {props.title}
-              </div>
-              <div id="project-category" className="itemText">
-                {props.category}
-              </div>
+          </div>
+          <div style={{ padding: "0.5rem" }}>
+            <div id="project-title" className="itemText">
+              {props.title}
+            </div>
+            <div id="project-category" className="itemText">
+              {props.category}
             </div>
           </div>
         </motion.div>
