@@ -126,13 +126,12 @@ export default function ProjectPage() {
               <Row xs={numCols} md={numCols}>
                 <Col
                   className="col-image-transition"
-                  style={{ margin: "auto" }}
+                  style={{ display: "flex", alignItems: "center" }}
                 >
                   <Card.Img
                     style={{
                       borderRadius: "30px",
                       padding: "1rem",
-                      verticalAlign: "middle",
                     }}
                     variant="top"
                     src={projectData[id].image}
@@ -141,19 +140,27 @@ export default function ProjectPage() {
                 </Col>
                 <Col>
                   <Card.Body>
-                    <Card.Title
-                      className="cardTitle"
-                      style={{
-                        textAlign: "left",
-                        fontWeight: "bold",
-                        fontSize: "25pt",
-                      }}
-                    >
-                      {projectData[id].name}
-                    </Card.Title>
-                    <Card.Text className="itemDate">
-                      {projectData[id].year}
-                    </Card.Text>
+                    {
+                      <Card.Title
+                        className="cardTitle"
+                        style={{
+                          textAlign: "left",
+                          fontWeight: "bold",
+                          fontSize: "25pt",
+                          textDecoration: "underline",
+                        }}
+                      >
+                        {projectData[id].name}
+                      </Card.Title>
+                    }
+                    {
+                      <Card.Text
+                        className="itemDate"
+                        style={{ textDecoration: "underline" }}
+                      >
+                        {projectData[id].year}
+                      </Card.Text>
+                    }
                     <Description />
                     <Card.Text />
                     <Card.Text className="projectItemDetails">
