@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import PageNotFound from "./PageNotFound";
 
@@ -7,10 +7,26 @@ import projectData from "../Data/projectData.json";
 import { useParams } from "react-router";
 
 import { motion } from "framer-motion";
-import { Container } from "reactstrap";
+import { Container, Row, Col } from "reactstrap";
 import { Card, Image, Button } from "react-bootstrap";
 
 export default function ProjectPage() {
+  const [numCols, setNumCols] = useState();
+
+  let handleGridChange = () => {
+    if (window.innerWidth > window.innerHeight && window.innerHeight < 900) {
+      setNumCols(2);
+    } else {
+      setNumCols(1);
+    }
+  };
+
+  useEffect(() => {
+    handleGridChange();
+  }, []);
+
+  window.addEventListener("resize", handleGridChange);
+
   let { id } = useParams();
   if (!projectData.hasOwnProperty(id)) {
     return <PageNotFound />;
@@ -106,33 +122,50 @@ export default function ProjectPage() {
             bg="dark"
             text="white"
           >
-            <Card.Img
-              style={{ borderRadius: "30px", padding: "1rem" }}
-              variant="top"
-              src={projectData[id].image}
-              alt={`${projectData[id].name} Image`}
-            />
-            <Card.Body>
-              <Card.Title
-                className="cardTitle"
-                style={{
-                  textAlign: "left",
-                  fontWeight: "bold",
-                  fontSize: "25pt",
-                }}
-              >
-                {projectData[id].name}
-              </Card.Title>
-              <Card.Text className="itemDate">{projectData[id].year}</Card.Text>
-              <Description />
-              <Card.Text />
-              <Card.Text className="projectItemDetails">
-                <Source />
-              </Card.Text>
-              <Card.Text className="projectItemDetails">
-                <Download />
-              </Card.Text>
-            </Card.Body>
+            <Container fluid={true} style={{ padding: "0rem" }}>
+              <Row xs={numCols} md={numCols}>
+                <Col
+                  className="col-image-transition"
+                  style={{ margin: "auto" }}
+                >
+                  <Card.Img
+                    style={{
+                      borderRadius: "30px",
+                      padding: "1rem",
+                      verticalAlign: "middle",
+                    }}
+                    variant="top"
+                    src={projectData[id].image}
+                    alt={`${projectData[id].name} Image`}
+                  />
+                </Col>
+                <Col>
+                  <Card.Body>
+                    <Card.Title
+                      className="cardTitle"
+                      style={{
+                        textAlign: "left",
+                        fontWeight: "bold",
+                        fontSize: "25pt",
+                      }}
+                    >
+                      {projectData[id].name}
+                    </Card.Title>
+                    <Card.Text className="itemDate">
+                      {projectData[id].year}
+                    </Card.Text>
+                    <Description />
+                    <Card.Text />
+                    <Card.Text className="projectItemDetails">
+                      <Source />
+                    </Card.Text>
+                    <Card.Text className="projectItemDetails">
+                      <Download />
+                    </Card.Text>
+                  </Card.Body>
+                </Col>
+              </Row>
+            </Container>
           </Card>
         </Container>
       </motion.div>

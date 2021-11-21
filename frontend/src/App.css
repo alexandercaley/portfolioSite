@@ -33,7 +33,7 @@ html {
   height: auto;
 }
 
-.col-person-transition {
+.col-image-transition {
   flex-grow: 1;
   transition: all 150ms ease-out;
 }

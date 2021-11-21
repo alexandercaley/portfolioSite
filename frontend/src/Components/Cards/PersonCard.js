@@ -104,7 +104,7 @@ export default function PersonCard(props) {
         <Row xs={showText ? 1 : 2} md={showText ? 1 : 2}>
           <Col
             className={
-              showText && props.numCols === 1 ? "col-person-transition" : ""
+              showText && props.numCols === 1 ? "col-image-transition" : ""
             }
           >
             <div
@@ -124,7 +124,7 @@ export default function PersonCard(props) {
           </Col>
           <Col
             className={
-              showText && props.numCols === 1 ? "col-person-transition" : ""
+              showText && props.numCols === 1 ? "col-image-transition" : ""
             }
           >
             <Card.Body>
