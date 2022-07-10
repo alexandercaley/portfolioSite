@@ -3,7 +3,7 @@
     "name": "Apple",
     "roles": [
       {
-        "name": "iOS Engineer",
+        "name": "Software Engineer",
         "year": "Jan 2021 - Current",
         "description": ["Swift/Objective-C", "News/Stocks/Weather"]
       },
@@ -27,20 +27,6 @@
         "description": [
           "Developed and unit tested web, mobile, and native applications in various languages and frameworks including Java, Typescript, Javascript, Node.js, React, C, Swift in combination with several other technologies.",
           "A list of relevant projects along with GitHub repo's and README's can be found in the Projects section of my Portfolio ranging from personal projects to projects with groups up to 7 people."
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Encino Health & Wellness",
-    "roles": [
-      {
-        "name": "Billing/Network Admin/Advertising",
-        "year": "Jun 2013 - Aug 2016",
-        "description": [
-          "Managed marketing and advertisement and produced ads.",
-          "Interacted with insurance companies to handle billing/submitted billing requests.",
-          "Setup local network and all machines on network, including mass network storage and security."
         ]
       }
     ]
