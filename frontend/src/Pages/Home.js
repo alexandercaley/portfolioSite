@@ -71,7 +71,7 @@ export default function Home() {
               }}
             >
               <div style={{ paddingBottom: "1rem" }}>
-                <EducationCard />
+                <WorkExpCard />
               </div>
             </motion.div>
             <motion.div
@@ -92,7 +92,7 @@ export default function Home() {
               }}
             >
               <div style={{ paddingBottom: "1rem" }}>
-                <WorkExpCard />
+                <EducationCard />
               </div>
             </motion.div>
           </Col>
