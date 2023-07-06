@@ -1,4 +1,4 @@
-FROM node:14
+FROM node:16
 
 WORKDIR /portfolioSite/frontend
 
@@ -7,8 +7,6 @@ COPY package*.json ./
 RUN npm install
 
 RUN npm install pm2@latest -g
-
-RUN npm audit fix
 
 COPY . .
 
